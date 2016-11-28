@@ -1,0 +1,40 @@
+package com.tl.server.ticker.service;
+
+import com.facebook.swift.codec.ThriftField;
+import com.tl.rpc.base.BaseData;
+import com.tl.rpc.base.BaseDataService;
+import com.tl.rpc.common.RpcException;
+import com.tl.rpc.common.ServiceToken;
+import com.tl.server.ticker.entity.BaseDataEntity;
+import org.apache.thrift.TException;
+
+import java.util.LinkedList;
+import java.util.List;
+
+/**
+ * Created by pangjian on 16-11-26.
+ */
+public class BaseDataServiceImpl extends BaseDaoImpl<BaseDataEntity> implements BaseDataService{
+
+    public BaseDataServiceImpl(){
+        super(BaseDataEntity.class);
+    }
+
+    public void save(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "baseData", requiredness = ThriftField.Requiredness.NONE) BaseData baseData) throws RpcException, TException {
+        this.save(BaseDataEntity.formBaseDataEntity(baseData));
+    }
+
+    public List<BaseData> search(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "year", requiredness = ThriftField.Requiredness.NONE) int year) throws RpcException, TException {
+
+        String sql = "select * from t_base_data b where b.year =:year";
+
+        List<BaseDataEntity> list =this.getSession().createNativeQuery(sql,BaseDataEntity.class).setParameter("year",year).list();
+
+        List<BaseData> resultList = new LinkedList<BaseData>();
+        for (BaseDataEntity entity : list) {
+            resultList.add(entity.toBaseData());
+        }
+
+        return resultList;
+    }
+}

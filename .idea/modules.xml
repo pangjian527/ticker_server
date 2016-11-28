@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ticker_api/ticker_api.iml" filepath="$PROJECT_DIR$/ticker_api/ticker_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ticker_server.iml" filepath="$PROJECT_DIR$/ticker_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ticker_server_impl/ticker_server_impl.iml" filepath="$PROJECT_DIR$/ticker_server_impl/ticker_server_impl.iml" />
+    </modules>
+  </component>
+</project>
