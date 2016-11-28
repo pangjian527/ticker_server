@@ -1,5 +1,7 @@
 package com.tl.server.ticker.entity;
 
+import com.tl.rpc.recharge.Recharge;
+import org.apache.commons.beanutils.BeanUtils;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -90,5 +92,26 @@ public class RechargeEntity {
 
     public void setSource(String source) {
         this.source = source;
+    }
+
+    public static RechargeEntity formRechargeEntity(Recharge recharge){
+
+        RechargeEntity entity = new RechargeEntity();
+        try{
+            BeanUtils.copyProperties(entity,recharge);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return entity;
+    }
+
+    public Recharge toRecharge(){
+        Recharge recharge = new Recharge();
+        try{
+            BeanUtils.copyProperties(recharge,this);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return recharge;
     }
 }

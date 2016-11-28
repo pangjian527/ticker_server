@@ -17,7 +17,7 @@ public interface LotteryDataService
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<List<LotteryData>> search(
+        ListenableFuture<SearchResult> search(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="year", requiredness=Requiredness.NONE) final int year,
             @ThriftField(value=3, name="limit", requiredness=Requiredness.NONE) final int limit,
@@ -37,7 +37,7 @@ public interface LotteryDataService
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    List<LotteryData> search(
+    SearchResult search(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="year", requiredness=Requiredness.NONE) final int year,
         @ThriftField(value=3, name="limit", requiredness=Requiredness.NONE) final int limit,

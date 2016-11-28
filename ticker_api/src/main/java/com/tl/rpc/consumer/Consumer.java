@@ -1,4 +1,4 @@
-package com.tl.rpc.sys;
+package com.tl.rpc.consumer;
 
 import com.facebook.swift.codec.*;
 import com.facebook.swift.codec.ThriftField.Requiredness;
@@ -7,10 +7,10 @@ import java.util.*;
 
 import static com.google.common.base.MoreObjects.toStringHelper;
 
-@ThriftStruct("SysUser")
-public final class SysUser
+@ThriftStruct("Consumer")
+public final class Consumer
 {
-    public SysUser() {
+    public Consumer() {
     }
 
     private String id;
@@ -21,13 +21,13 @@ public final class SysUser
     @ThriftField
     public void setId(final String id) { this.id = id; }
 
-    private String account;
+    private String mobile;
 
-    @ThriftField(value=2, name="account", requiredness=Requiredness.NONE)
-    public String getAccount() { return account; }
+    @ThriftField(value=2, name="mobile", requiredness=Requiredness.NONE)
+    public String getMobile() { return mobile; }
 
     @ThriftField
-    public void setAccount(final String account) { this.account = account; }
+    public void setMobile(final String mobile) { this.mobile = mobile; }
 
     private long createTime;
 
@@ -45,21 +45,21 @@ public final class SysUser
     @ThriftField
     public void setUpdateTime(final long updateTime) { this.updateTime = updateTime; }
 
-    private String role;
+    private long balance;
 
-    @ThriftField(value=5, name="role", requiredness=Requiredness.NONE)
-    public String getRole() { return role; }
+    @ThriftField(value=5, name="balance", requiredness=Requiredness.NONE)
+    public long getBalance() { return balance; }
 
     @ThriftField
-    public void setRole(final String role) { this.role = role; }
+    public void setBalance(final long balance) { this.balance = balance; }
 
-    private SYSUSERSTATUS status;
+    private CONSUMERSTATUS status;
 
     @ThriftField(value=6, name="status", requiredness=Requiredness.NONE)
-    public SYSUSERSTATUS getStatus() { return status; }
+    public CONSUMERSTATUS getStatus() { return status; }
 
     @ThriftField
-    public void setStatus(final SYSUSERSTATUS status) { this.status = status; }
+    public void setStatus(final CONSUMERSTATUS status) { this.status = status; }
 
     private String pwd;
 
@@ -69,17 +69,26 @@ public final class SysUser
     @ThriftField
     public void setPwd(final String pwd) { this.pwd = pwd; }
 
+    private String refereeId;
+
+    @ThriftField(value=8, name="refereeId", requiredness=Requiredness.NONE)
+    public String getRefereeId() { return refereeId; }
+
+    @ThriftField
+    public void setRefereeId(final String refereeId) { this.refereeId = refereeId; }
+
     @Override
     public String toString()
     {
         return toStringHelper(this)
             .add("id", id)
-            .add("account", account)
+            .add("mobile", mobile)
             .add("createTime", createTime)
             .add("updateTime", updateTime)
-            .add("role", role)
+            .add("balance", balance)
             .add("status", status)
             .add("pwd", pwd)
+            .add("refereeId", refereeId)
             .toString();
     }
 
@@ -92,28 +101,30 @@ public final class SysUser
             return false;
         }
 
-        SysUser other = (SysUser)o;
+        Consumer other = (Consumer)o;
 
         return
             Objects.equals(id, other.id) &&
-            Objects.equals(account, other.account) &&
+            Objects.equals(mobile, other.mobile) &&
             Objects.equals(createTime, other.createTime) &&
             Objects.equals(updateTime, other.updateTime) &&
-            Objects.equals(role, other.role) &&
+            Objects.equals(balance, other.balance) &&
             Objects.equals(status, other.status) &&
-            Objects.equals(pwd, other.pwd);
+            Objects.equals(pwd, other.pwd) &&
+            Objects.equals(refereeId, other.refereeId);
     }
 
     @Override
     public int hashCode() {
         return Arrays.deepHashCode(new Object[] {
             id,
-            account,
+            mobile,
             createTime,
             updateTime,
-            role,
+            balance,
             status,
-            pwd
+            pwd,
+            refereeId
         });
     }
 }

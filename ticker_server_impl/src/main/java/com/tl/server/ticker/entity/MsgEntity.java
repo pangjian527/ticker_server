@@ -1,5 +1,7 @@
 package com.tl.server.ticker.entity;
 
+import com.tl.rpc.msg.Msg;
+import org.apache.commons.beanutils.BeanUtils;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -69,4 +71,26 @@ public class MsgEntity {
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
+
+    public static MsgEntity formMsgEntity(Msg msg){
+
+        MsgEntity entity = new MsgEntity();
+        try{
+            BeanUtils.copyProperties(entity,msg);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return entity;
+    }
+
+    public Msg toMsg(){
+        Msg msg = new Msg();
+        try{
+            BeanUtils.copyProperties(msg,this);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return msg;
+    }
+
 }

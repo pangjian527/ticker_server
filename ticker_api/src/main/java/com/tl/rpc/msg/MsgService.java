@@ -19,8 +19,7 @@ public interface MsgService
                       })
         ListenableFuture<Void> sendMsg(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
-            @ThriftField(value=2, name="mobile", requiredness=Requiredness.NONE) final String mobile,
-            @ThriftField(value=3, name="content", requiredness=Requiredness.NONE) final String content
+            @ThriftField(value=2, name="msg", requiredness=Requiredness.NONE) final Msg msg
         );
 
         @ThriftMethod(value = "search",
@@ -38,8 +37,7 @@ public interface MsgService
                   })
     void sendMsg(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
-        @ThriftField(value=2, name="mobile", requiredness=Requiredness.NONE) final String mobile,
-        @ThriftField(value=3, name="content", requiredness=Requiredness.NONE) final String content
+        @ThriftField(value=2, name="msg", requiredness=Requiredness.NONE) final Msg msg
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 
     @ThriftMethod(value = "search",

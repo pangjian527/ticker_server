@@ -26,7 +26,7 @@ public interface OrderService
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<List<OrderResult>> search(
+        ListenableFuture<OrderResult> search(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
             @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset
@@ -36,7 +36,7 @@ public interface OrderService
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<List<OrderResult>> searchByUserId(
+        ListenableFuture<OrderResult> searchByUserId(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
             @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
@@ -56,7 +56,7 @@ public interface OrderService
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    List<OrderResult> search(
+    OrderResult search(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
         @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset
@@ -66,7 +66,7 @@ public interface OrderService
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    List<OrderResult> searchByUserId(
+    OrderResult searchByUserId(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
         @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,

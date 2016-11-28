@@ -33,8 +33,7 @@
                 </executions>
                 <configuration>
                     <idlFiles>
-                        <directory>/home/pangjian/workspace/ideaIj/ticker/idl/</directory>
-                        <directory>/home/pangjian/workspace/ideaIj/ticker/idl/common/</directory>
+                        <directory>/home/pangjian/workspace/ideaIj/ticker/idl</directory>
                         <includes>
                             <include>*.thrift</include>
                         </includes>

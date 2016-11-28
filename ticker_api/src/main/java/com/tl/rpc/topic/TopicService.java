@@ -26,7 +26,7 @@ public interface TopicService
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<List<Topic>> search(
+        ListenableFuture<SearchTopicResult> search(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
             @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
@@ -37,7 +37,7 @@ public interface TopicService
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<List<Reply>> searchReplyByTopicId(
+        ListenableFuture<SearchReplyResult> searchReplyByTopicId(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
             @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
@@ -57,7 +57,7 @@ public interface TopicService
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    List<Topic> search(
+    SearchTopicResult search(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
         @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
@@ -68,7 +68,7 @@ public interface TopicService
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    List<Reply> searchReplyByTopicId(
+    SearchReplyResult searchReplyByTopicId(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
         @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,

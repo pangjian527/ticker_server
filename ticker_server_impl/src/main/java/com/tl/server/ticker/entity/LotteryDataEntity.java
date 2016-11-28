@@ -1,5 +1,7 @@
 package com.tl.server.ticker.entity;
 
+import com.tl.rpc.lottery.LotteryData;
+import org.apache.commons.beanutils.BeanUtils;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -91,4 +93,28 @@ public class LotteryDataEntity {
     public void setBaseDataId(String baseDataId) {
         this.baseDataId = baseDataId;
     }
+
+    public static LotteryDataEntity formLotteryDataEntity(LotteryData lotteryData){
+
+        LotteryDataEntity entity = new LotteryDataEntity();
+        try{
+            BeanUtils.copyProperties(entity,lotteryData);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return entity;
+    }
+
+    public LotteryData toLotteryData(){
+        LotteryData lotteryData = new LotteryData();
+        try{
+            BeanUtils.copyProperties(lotteryData,this);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return lotteryData;
+    }
+
+
+
 }

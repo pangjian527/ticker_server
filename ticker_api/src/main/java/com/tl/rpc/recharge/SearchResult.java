@@ -1,4 +1,4 @@
-package com.tl.rpc.order;
+package com.tl.rpc.recharge;
 
 import com.facebook.swift.codec.*;
 import com.facebook.swift.codec.ThriftField.Requiredness;
@@ -7,10 +7,10 @@ import java.util.*;
 
 import static com.google.common.base.MoreObjects.toStringHelper;
 
-@ThriftStruct("OrderResult")
-public final class OrderResult
+@ThriftStruct("SearchResult")
+public final class SearchResult
 {
-    public OrderResult() {
+    public SearchResult() {
     }
 
     private int totalCount;
@@ -21,13 +21,13 @@ public final class OrderResult
     @ThriftField
     public void setTotalCount(final int totalCount) { this.totalCount = totalCount; }
 
-    private List<Order> result;
+    private List<Recharge> result;
 
     @ThriftField(value=2, name="result", requiredness=Requiredness.NONE)
-    public List<Order> getResult() { return result; }
+    public List<Recharge> getResult() { return result; }
 
     @ThriftField
-    public void setResult(final List<Order> result) { this.result = result; }
+    public void setResult(final List<Recharge> result) { this.result = result; }
 
     @Override
     public String toString()
@@ -47,7 +47,7 @@ public final class OrderResult
             return false;
         }
 
-        OrderResult other = (OrderResult)o;
+        SearchResult other = (SearchResult)o;
 
         return
             Objects.equals(totalCount, other.totalCount) &&

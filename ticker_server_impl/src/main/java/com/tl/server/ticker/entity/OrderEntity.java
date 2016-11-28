@@ -1,5 +1,7 @@
 package com.tl.server.ticker.entity;
 
+import com.tl.rpc.order.Order;
+import org.apache.commons.beanutils.BeanUtils;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -123,5 +125,27 @@ public class OrderEntity {
 
     public void setStage(int stage) {
         this.stage = stage;
+    }
+
+
+    public static OrderEntity formOrderEntity(Order order){
+
+        OrderEntity entity = new OrderEntity();
+        try{
+            BeanUtils.copyProperties(entity,order);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return entity;
+    }
+
+    public Order toOrder(){
+        Order msg = new Order();
+        try{
+            BeanUtils.copyProperties(msg,this);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return msg;
     }
 }
