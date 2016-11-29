@@ -20,11 +20,11 @@ public class BaseDataServiceImpl extends BaseDaoImpl<BaseDataEntity> implements 
         super(BaseDataEntity.class);
     }
 
-    public void save(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "baseData", requiredness = ThriftField.Requiredness.NONE) BaseData baseData) throws RpcException, TException {
+    public void saveBaseData(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "baseData", requiredness = ThriftField.Requiredness.NONE) BaseData baseData) throws RpcException, TException {
         this.save(BaseDataEntity.formBaseDataEntity(baseData));
     }
 
-    public List<BaseData> search(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "year", requiredness = ThriftField.Requiredness.NONE) int year) throws RpcException, TException {
+    public List<BaseData> searchBaseData(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "year", requiredness = ThriftField.Requiredness.NONE) int year) throws RpcException, TException {
 
         String sql = "select * from t_base_data b where b.year =:year";
 

@@ -1,4 +1,4 @@
-package com.tl.rpc.topic;
+package com.tl.rpc.reply;
 
 import com.facebook.swift.codec.*;
 import com.facebook.swift.codec.ThriftField.Requiredness;

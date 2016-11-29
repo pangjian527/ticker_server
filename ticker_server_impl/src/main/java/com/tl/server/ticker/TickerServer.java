@@ -5,11 +5,16 @@ import com.facebook.swift.codec.ThriftCodecManager;
 import com.facebook.swift.service.ThriftServer;
 import com.facebook.swift.service.ThriftServerConfig;
 import com.facebook.swift.service.ThriftServiceProcessor;
+import com.tl.rpc.base.BaseDataService;
+import com.tl.rpc.lottery.LotteryDataService;
+import com.tl.rpc.msg.MsgService;
+import com.tl.rpc.order.OrderService;
+import com.tl.rpc.recharge.RechargeService;
+import com.tl.rpc.reply.ReplyService;
 import com.tl.rpc.sys.SysUser;
 import com.tl.rpc.sys.SysUserService;
 import com.tl.rpc.topic.TopicService;
-import com.tl.server.ticker.service.SysUserServiceImpl;
-import com.tl.server.ticker.service.TopicServiceImpl;
+import com.tl.server.ticker.service.*;
 import io.airlift.units.Duration;
 
 import java.util.ArrayList;
@@ -24,11 +29,18 @@ public class TickerServer {
 
         SysUserService sysUserService = new SysUserServiceImpl();
         TopicService topicService = new TopicServiceImpl();
+        ReplyService replyService = new ReplyServiceImpl();
+        RechargeService rechargeService = new RechargeServiceImpl();
+        OrderService orderService = new OrderServiceImpl();
+        MsgService msgService = new MsgServiceImpl();
+        LotteryDataService lotteryDataService = new LotteryDataServiceImpl();
+        BaseDataService baseDataService = new BaseDataServiceImpl();
 
         ThriftServiceProcessor processor =
                 new ThriftServiceProcessor(new ThriftCodecManager(new ThriftCodec[0]),
                         new ArrayList(),
-                        new Object[]{sysUserService,topicService});
+                        new Object[]{sysUserService,topicService,replyService,rechargeService
+                        ,orderService,msgService,lotteryDataService,baseDataService});
 
         ThriftServerConfig serverConfig = new ThriftServerConfig();
         serverConfig.setBindAddress("localhost");

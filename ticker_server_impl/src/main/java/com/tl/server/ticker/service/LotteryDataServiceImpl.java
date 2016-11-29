@@ -21,7 +21,7 @@ public class LotteryDataServiceImpl extends BaseDaoImpl<LotteryDataEntity> imple
         super(LotteryDataEntity.class);
     }
 
-    public SearchResult search(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken,
+    public SearchResult searchLotteryData(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken,
                                @ThriftField(value = 2, name = "year", requiredness = ThriftField.Requiredness.NONE) int year,
                                @ThriftField(value = 3, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit,
                                @ThriftField(value = 4, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset) throws RpcException, TException {
@@ -43,7 +43,7 @@ public class LotteryDataServiceImpl extends BaseDaoImpl<LotteryDataEntity> imple
         return result;
     }
 
-    public void save(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "lotteryData", requiredness = ThriftField.Requiredness.NONE) LotteryData lotteryData) throws RpcException, TException {
+    public void saveLotteryData(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "lotteryData", requiredness = ThriftField.Requiredness.NONE) LotteryData lotteryData) throws RpcException, TException {
         this.save(LotteryDataEntity.formLotteryDataEntity(lotteryData));
     }
 }

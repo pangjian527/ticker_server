@@ -13,40 +13,40 @@ public interface RechargeService
     @ThriftService("RechargeService")
     public interface Async
     {
-        @ThriftMethod(value = "save",
+        @ThriftMethod(value = "saveRecharge",
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<Void> save(
+        ListenableFuture<Void> saveRecharge(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="Recharge", requiredness=Requiredness.NONE) final Recharge recharge
         );
 
-        @ThriftMethod(value = "search",
+        @ThriftMethod(value = "searchRecharge",
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<SearchResult> search(
+        ListenableFuture<SearchResult> searchRecharge(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
             @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
             @ThriftField(value=4, name="userId", requiredness=Requiredness.NONE) final String userId
         );
     }
-    @ThriftMethod(value = "save",
+    @ThriftMethod(value = "saveRecharge",
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    void save(
+    void saveRecharge(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="Recharge", requiredness=Requiredness.NONE) final Recharge recharge
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 
-    @ThriftMethod(value = "search",
+    @ThriftMethod(value = "searchRecharge",
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    SearchResult search(
+    SearchResult searchRecharge(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
         @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,

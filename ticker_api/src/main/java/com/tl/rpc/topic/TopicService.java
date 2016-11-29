@@ -13,65 +13,43 @@ public interface TopicService
     @ThriftService("TopicService")
     public interface Async
     {
-        @ThriftMethod(value = "save",
+        @ThriftMethod(value = "saveTopic",
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<Void> save(
+        ListenableFuture<Void> saveTopic(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="topic", requiredness=Requiredness.NONE) final Topic topic
         );
 
-        @ThriftMethod(value = "search",
+        @ThriftMethod(value = "searchTopic",
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<SearchTopicResult> search(
+        ListenableFuture<SearchTopicResult> searchTopic(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
             @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
             @ThriftField(value=4, name="status", requiredness=Requiredness.NONE) final TOPICSTATUS status
         );
-
-        @ThriftMethod(value = "searchReplyByTopicId",
-                      exception = {
-                          @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
-                      })
-        ListenableFuture<SearchReplyResult> searchReplyByTopicId(
-            @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
-            @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
-            @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
-            @ThriftField(value=4, name="topicId", requiredness=Requiredness.NONE) final String topicId
-        );
     }
-    @ThriftMethod(value = "save",
+    @ThriftMethod(value = "saveTopic",
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    void save(
+    void saveTopic(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="topic", requiredness=Requiredness.NONE) final Topic topic
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 
-    @ThriftMethod(value = "search",
+    @ThriftMethod(value = "searchTopic",
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    SearchTopicResult search(
+    SearchTopicResult searchTopic(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
         @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
         @ThriftField(value=4, name="status", requiredness=Requiredness.NONE) final TOPICSTATUS status
-    ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
-
-    @ThriftMethod(value = "searchReplyByTopicId",
-                  exception = {
-                      @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
-                  })
-    SearchReplyResult searchReplyByTopicId(
-        @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
-        @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
-        @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
-        @ThriftField(value=4, name="topicId", requiredness=Requiredness.NONE) final String topicId
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 }

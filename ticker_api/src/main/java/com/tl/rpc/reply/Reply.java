@@ -1,4 +1,4 @@
-package com.tl.rpc.topic;
+package com.tl.rpc.reply;
 
 import com.facebook.swift.codec.*;
 import com.facebook.swift.codec.ThriftField.Requiredness;
@@ -45,6 +45,14 @@ public final class Reply
     @ThriftField
     public void setCreateTime(final long createTime) { this.createTime = createTime; }
 
+    private REPLYSTATUS status;
+
+    @ThriftField(value=5, name="status", requiredness=Requiredness.NONE)
+    public REPLYSTATUS getStatus() { return status; }
+
+    @ThriftField
+    public void setStatus(final REPLYSTATUS status) { this.status = status; }
+
     @Override
     public String toString()
     {
@@ -53,6 +61,7 @@ public final class Reply
             .add("content", content)
             .add("userId", userId)
             .add("createTime", createTime)
+            .add("status", status)
             .toString();
     }
 
@@ -71,7 +80,8 @@ public final class Reply
             Objects.equals(id, other.id) &&
             Objects.equals(content, other.content) &&
             Objects.equals(userId, other.userId) &&
-            Objects.equals(createTime, other.createTime);
+            Objects.equals(createTime, other.createTime) &&
+            Objects.equals(status, other.status);
     }
 
     @Override
@@ -80,7 +90,8 @@ public final class Reply
             id,
             content,
             userId,
-            createTime
+            createTime,
+            status
         });
     }
 }

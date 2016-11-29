@@ -22,11 +22,11 @@ public interface MsgService
             @ThriftField(value=2, name="msg", requiredness=Requiredness.NONE) final Msg msg
         );
 
-        @ThriftMethod(value = "search",
+        @ThriftMethod(value = "searchMsg",
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<List<Msg>> search(
+        ListenableFuture<List<Msg>> searchMsg(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="mobile", requiredness=Requiredness.NONE) final String mobile
         );
@@ -40,11 +40,11 @@ public interface MsgService
         @ThriftField(value=2, name="msg", requiredness=Requiredness.NONE) final Msg msg
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 
-    @ThriftMethod(value = "search",
+    @ThriftMethod(value = "searchMsg",
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    List<Msg> search(
+    List<Msg> searchMsg(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="mobile", requiredness=Requiredness.NONE) final String mobile
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;

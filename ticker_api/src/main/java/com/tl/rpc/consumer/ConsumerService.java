@@ -22,20 +22,20 @@ public interface ConsumerService
             @ThriftField(value=2, name="mobile", requiredness=Requiredness.NONE) final String mobile
         );
 
-        @ThriftMethod(value = "save",
+        @ThriftMethod(value = "saveConsumer",
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<Void> save(
+        ListenableFuture<Void> saveConsumer(
             @ThriftField(value=1, name="serviceToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken serviceToken,
             @ThriftField(value=2, name="consumer", requiredness=Requiredness.NONE) final Consumer consumer
         );
 
-        @ThriftMethod(value = "search",
+        @ThriftMethod(value = "searchConsumer",
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<SearchResult> search(
+        ListenableFuture<SearchResult> searchConsumer(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
             @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset
@@ -50,20 +50,20 @@ public interface ConsumerService
         @ThriftField(value=2, name="mobile", requiredness=Requiredness.NONE) final String mobile
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 
-    @ThriftMethod(value = "save",
+    @ThriftMethod(value = "saveConsumer",
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    void save(
+    void saveConsumer(
         @ThriftField(value=1, name="serviceToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken serviceToken,
         @ThriftField(value=2, name="consumer", requiredness=Requiredness.NONE) final Consumer consumer
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 
-    @ThriftMethod(value = "search",
+    @ThriftMethod(value = "searchConsumer",
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    SearchResult search(
+    SearchResult searchConsumer(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
         @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset

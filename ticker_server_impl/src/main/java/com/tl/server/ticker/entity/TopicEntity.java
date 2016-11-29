@@ -1,5 +1,8 @@
 package com.tl.server.ticker.entity;
 
+import com.tl.rpc.reply.Reply;
+import com.tl.rpc.topic.Topic;
+import org.apache.commons.beanutils.BeanUtils;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -146,6 +149,28 @@ public class TopicEntity {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+
+    public static TopicEntity formTopicEntity(Topic topic){
+
+        TopicEntity entity = new TopicEntity();
+        try{
+            BeanUtils.copyProperties(entity,topic);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return entity;
+    }
+
+    public Topic toTopic(){
+        Topic topic = new Topic();
+        try{
+            BeanUtils.copyProperties(topic,this);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return topic;
     }
 
 }

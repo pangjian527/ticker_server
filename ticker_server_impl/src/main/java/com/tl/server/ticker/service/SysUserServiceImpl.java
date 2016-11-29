@@ -19,9 +19,16 @@ public class SysUserServiceImpl extends BaseDaoImpl<SysUserEntity> implements Sy
         super(SysUserEntity.class);
     }
 
+    public SysUser getByAccount(@ThriftField(value = 1, name = "serviceToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken serviceToken, @ThriftField(value = 2, name = "account", requiredness = ThriftField.Requiredness.NONE) String account) throws RpcException, TException {
 
-    public SysUser getByAccount(@ThriftField(value = 1, name = "serviceToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken serviceToken, @ThriftField(value = 2, name = "userId", requiredness = ThriftField.Requiredness.NONE) String userId) throws RpcException, TException {
-        return this.get(userId).toSysUser();
+        StringBuilder sql = new StringBuilder("select * from sys_user u where u.account = :account");
+
+        List<SysUserEntity> list = this.setSql(sql.toString()).setParameter("account", account).execute();
+
+        if(list.size() > 0 ){
+            return list.get(0).toSysUser();
+        }
+
+        return null;
     }
-
 }

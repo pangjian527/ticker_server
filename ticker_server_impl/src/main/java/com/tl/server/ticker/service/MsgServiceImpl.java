@@ -24,7 +24,7 @@ public class MsgServiceImpl extends BaseDaoImpl<MsgEntity> implements MsgService
         this.save(MsgEntity.formMsgEntity(msg));
     }
 
-    public List<Msg> search(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "mobile", requiredness = ThriftField.Requiredness.NONE) String mobile) throws RpcException, TException {
+    public List<Msg> searchMsg(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "mobile", requiredness = ThriftField.Requiredness.NONE) String mobile) throws RpcException, TException {
 
         String sql = "select * from t_msg m where m.mobile = mobile ";
 

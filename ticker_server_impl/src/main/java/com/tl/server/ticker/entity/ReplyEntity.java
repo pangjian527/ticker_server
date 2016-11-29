@@ -1,5 +1,7 @@
 package com.tl.server.ticker.entity;
 
+import com.tl.rpc.reply.Reply;
+import org.apache.commons.beanutils.BeanUtils;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -21,6 +23,8 @@ public class ReplyEntity {
     private Date createTime;
 
     private Date updateTime;
+
+    private String status;
 
     @GenericGenerator(name = "generator", strategy = "uuid.hex")
     @Id
@@ -68,5 +72,35 @@ public class ReplyEntity {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    @Column(name = "status")
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public static ReplyEntity formReplyEntity(Reply reply){
+
+        ReplyEntity entity = new ReplyEntity();
+        try{
+            BeanUtils.copyProperties(entity,reply);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return entity;
+    }
+
+    public Reply toReply(){
+        Reply reply = new Reply();
+        try{
+            BeanUtils.copyProperties(reply,this);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return reply;
     }
 }

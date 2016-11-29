@@ -1,4 +1,4 @@
-package com.tl.rpc.lottery;
+package com.tl.rpc.reply;
 
 import com.facebook.swift.codec.*;
 import com.facebook.swift.codec.ThriftField.Requiredness;
@@ -7,49 +7,49 @@ import com.google.common.util.concurrent.ListenableFuture;
 import java.io.*;
 import java.util.*;
 
-@ThriftService("LotteryDataService")
-public interface LotteryDataService
+@ThriftService("ReplyService")
+public interface ReplyService
 {
-    @ThriftService("LotteryDataService")
+    @ThriftService("ReplyService")
     public interface Async
     {
-        @ThriftMethod(value = "searchLotteryData",
+        @ThriftMethod(value = "saveReply",
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<SearchResult> searchLotteryData(
+        ListenableFuture<Void> saveReply(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
-            @ThriftField(value=2, name="year", requiredness=Requiredness.NONE) final int year,
-            @ThriftField(value=3, name="limit", requiredness=Requiredness.NONE) final int limit,
-            @ThriftField(value=4, name="offset", requiredness=Requiredness.NONE) final int offset
+            @ThriftField(value=2, name="reply", requiredness=Requiredness.NONE) final Reply reply
         );
 
-        @ThriftMethod(value = "saveLotteryData",
+        @ThriftMethod(value = "searchReplyByTopicId",
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                       })
-        ListenableFuture<Void> saveLotteryData(
+        ListenableFuture<SearchReplyResult> searchReplyByTopicId(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
-            @ThriftField(value=2, name="lotteryData", requiredness=Requiredness.NONE) final LotteryData lotteryData
+            @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
+            @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
+            @ThriftField(value=4, name="topicId", requiredness=Requiredness.NONE) final String topicId
         );
     }
-    @ThriftMethod(value = "searchLotteryData",
+    @ThriftMethod(value = "saveReply",
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    SearchResult searchLotteryData(
+    void saveReply(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
-        @ThriftField(value=2, name="year", requiredness=Requiredness.NONE) final int year,
-        @ThriftField(value=3, name="limit", requiredness=Requiredness.NONE) final int limit,
-        @ThriftField(value=4, name="offset", requiredness=Requiredness.NONE) final int offset
+        @ThriftField(value=2, name="reply", requiredness=Requiredness.NONE) final Reply reply
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 
-    @ThriftMethod(value = "saveLotteryData",
+    @ThriftMethod(value = "searchReplyByTopicId",
                   exception = {
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
-    void saveLotteryData(
+    SearchReplyResult searchReplyByTopicId(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
-        @ThriftField(value=2, name="lotteryData", requiredness=Requiredness.NONE) final LotteryData lotteryData
+        @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
+        @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
+        @ThriftField(value=4, name="topicId", requiredness=Requiredness.NONE) final String topicId
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 }

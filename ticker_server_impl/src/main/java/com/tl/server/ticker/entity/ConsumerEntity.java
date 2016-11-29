@@ -9,8 +9,8 @@ import java.util.Date;
  * Created by pangjian on 16-11-26.
  */
 @Table
-@Entity(name = "t_user")
-public class UserEntity {
+@Entity(name = "t_consumer")
+public class ConsumerEntity {
 
     private String id;
 
@@ -23,6 +23,10 @@ public class UserEntity {
     private Date updateTime;
 
     private String refereeId;
+
+    private String pwd;
+
+    private String status;
 
     @GenericGenerator(name = "generator", strategy = "uuid.hex")
     @Id
@@ -79,5 +83,23 @@ public class UserEntity {
 
     public void setRefereeId(String refereeId) {
         this.refereeId = refereeId;
+    }
+
+    @Column(name = "pwd")
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+
+    @Column(name = "status")
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

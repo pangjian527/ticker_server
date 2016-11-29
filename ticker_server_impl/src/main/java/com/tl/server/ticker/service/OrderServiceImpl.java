@@ -21,11 +21,11 @@ public class OrderServiceImpl extends BaseDaoImpl<OrderEntity> implements OrderS
         super(OrderEntity.class);
     }
 
-    public void save(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "order", requiredness = ThriftField.Requiredness.NONE) Order order) throws RpcException, TException {
+    public void saveOrder(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "order", requiredness = ThriftField.Requiredness.NONE) Order order) throws RpcException, TException {
         this.save(OrderEntity.formOrderEntity(order));
     }
 
-    public OrderResult search(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit, @ThriftField(value = 3, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset) throws RpcException, TException {
+    public OrderResult searchOrder(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit, @ThriftField(value = 3, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset) throws RpcException, TException {
 
         String sql = "select * from t_order o order by o.update_time desc ";
 
@@ -43,7 +43,7 @@ public class OrderServiceImpl extends BaseDaoImpl<OrderEntity> implements OrderS
         return result;
     }
 
-    public OrderResult searchByUserId(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit, @ThriftField(value = 3, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset, @ThriftField(value = 4, name = "userId", requiredness = ThriftField.Requiredness.NONE) String userId) throws RpcException, TException {
+    public OrderResult searchOrderByUserId(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit, @ThriftField(value = 3, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset, @ThriftField(value = 4, name = "userId", requiredness = ThriftField.Requiredness.NONE) String userId) throws RpcException, TException {
         String sql = "select * from t_order o where o.user_id =:userId order by o.update_time desc ";
 
         List<OrderEntity> list = this.setSql(sql).setParameter("iserId",userId).setLimit(limit).setOffset(offset).execute();
