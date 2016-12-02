@@ -6,6 +6,7 @@ import com.facebook.swift.service.ThriftServer;
 import com.facebook.swift.service.ThriftServerConfig;
 import com.facebook.swift.service.ThriftServiceProcessor;
 import com.tl.rpc.base.BaseDataService;
+import com.tl.rpc.consumer.ConsumerService;
 import com.tl.rpc.lottery.LotteryDataService;
 import com.tl.rpc.msg.MsgService;
 import com.tl.rpc.order.OrderService;
@@ -35,12 +36,13 @@ public class TickerServer {
         MsgService msgService = new MsgServiceImpl();
         LotteryDataService lotteryDataService = new LotteryDataServiceImpl();
         BaseDataService baseDataService = new BaseDataServiceImpl();
+        ConsumerService consumerService = new ConsumerServiceImpl();
 
         ThriftServiceProcessor processor =
                 new ThriftServiceProcessor(new ThriftCodecManager(new ThriftCodec[0]),
                         new ArrayList(),
                         new Object[]{sysUserService,topicService,replyService,rechargeService
-                        ,orderService,msgService,lotteryDataService,baseDataService});
+                        ,orderService,msgService,lotteryDataService,baseDataService,consumerService});
 
         ThriftServerConfig serverConfig = new ThriftServerConfig();
         serverConfig.setBindAddress("localhost");

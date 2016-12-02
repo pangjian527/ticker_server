@@ -40,7 +40,7 @@ public class RechargeEntity {
         this.id = id;
     }
 
-    @Column(name = "ID")
+    @Column(name = "user_id")
     public String getUserId() {
         return userId;
     }

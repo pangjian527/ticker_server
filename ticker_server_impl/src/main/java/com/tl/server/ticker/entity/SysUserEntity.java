@@ -100,6 +100,7 @@ public class SysUserEntity {
         sysUser.setStatus(SYSUSERSTATUS.valueOf(this.status));
         sysUser.setCreateTime(this.createTime.getTime());
         sysUser.setUpdateTime(this.updateTime.getTime());
+        sysUser.setPwd(this.pwd);
         return sysUser;
     }
 }

@@ -29,6 +29,14 @@
 
 
         <mapping class="com.tl.server.ticker.entity.SysUserEntity"></mapping>
+        <mapping class="com.tl.server.ticker.entity.BaseDataEntity"></mapping>
+        <mapping class="com.tl.server.ticker.entity.ConsumerEntity"></mapping>
+        <mapping class="com.tl.server.ticker.entity.LotteryDataEntity"></mapping>
+        <mapping class="com.tl.server.ticker.entity.MsgEntity"></mapping>
+        <mapping class="com.tl.server.ticker.entity.OrderEntity"></mapping>
+        <mapping class="com.tl.server.ticker.entity.RechargeEntity"></mapping>
+        <mapping class="com.tl.server.ticker.entity.ReplyEntity"></mapping>
+        <mapping class="com.tl.server.ticker.entity.TopicEntity"></mapping>
 
     </session-factory>
 </hibernate-configuration>

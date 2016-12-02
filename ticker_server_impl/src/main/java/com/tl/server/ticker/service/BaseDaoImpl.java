@@ -78,7 +78,7 @@ public class BaseDaoImpl<T> {
     }
 
     public int getCount(){
-        return Integer.valueOf(this.getSession().createNativeQuery("select count(1) from ("+ this.sql+")").setProperties(this.param).uniqueResult().toString());
+        return Integer.valueOf(this.getSession().createNativeQuery("select count(1) from ("+ this.sql+") t_count_temp ").setProperties(this.param).uniqueResult().toString());
     }
 
 

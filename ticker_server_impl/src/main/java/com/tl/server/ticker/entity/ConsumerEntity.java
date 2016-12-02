@@ -1,5 +1,9 @@
 package com.tl.server.ticker.entity;
 
+import com.tl.rpc.consumer.CONSUMERSTATUS;
+import com.tl.rpc.consumer.Consumer;
+import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.lang.time.DateUtils;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -16,7 +20,7 @@ public class ConsumerEntity {
 
     private String mobile;
 
-    private double balance;
+    private long balance;
 
     private Date createTime;
 
@@ -50,11 +54,11 @@ public class ConsumerEntity {
     }
 
     @Column(name = "balance")
-    public double getBalance() {
+    public long getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(long balance) {
         this.balance = balance;
     }
 
@@ -101,5 +105,32 @@ public class ConsumerEntity {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public static ConsumerEntity formConsumerEntity(Consumer consumer){
+
+        ConsumerEntity entity = new ConsumerEntity();
+        entity.setId(consumer.getId());
+        entity.setMobile(consumer.getMobile());
+        entity.setPwd(consumer.getPwd());
+        entity.setRefereeId(consumer.getRefereeId());
+        entity.setCreateTime(new Date(consumer.getCreateTime()));
+        entity.setUpdateTime(new Date(consumer.getUpdateTime()));
+        entity.setStatus(consumer.getStatus().name());
+        entity.setBalance(consumer.getBalance());
+        return entity;
+    }
+
+    public Consumer toConsumer(){
+        Consumer consumer = new Consumer();
+        consumer.setId(this.id);
+        consumer.setMobile(this.mobile);
+        consumer.setPwd(this.pwd);
+        consumer.setRefereeId(this.refereeId);
+        consumer.setCreateTime(this.createTime.getTime());
+        consumer.setUpdateTime(this.updateTime.getTime());
+        consumer.setStatus(CONSUMERSTATUS.valueOf(this.status));
+        consumer.setBalance(this.balance);
+        return consumer;
     }
 }
