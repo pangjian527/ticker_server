@@ -70,11 +70,13 @@ public class BaseDaoImpl<T> {
 
     public List<T> execute(){
 
+        StringBuilder sqlTemp =  new StringBuilder( this.sql.toString());
+
         if(limit >0 ){
-            this.sql.append(" limit ").append(offset).append(",").append(limit);
+            sqlTemp.append(" limit ").append(offset).append(",").append(limit);
         }
 
-        return this.getSession().createNativeQuery(sql.toString(),this.clazz).setProperties(this.param).list();
+        return this.getSession().createNativeQuery(sqlTemp.toString(),this.clazz).setProperties(this.param).list();
     }
 
     public int getCount(){
