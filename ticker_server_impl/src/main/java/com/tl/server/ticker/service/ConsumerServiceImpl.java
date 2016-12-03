@@ -33,6 +33,18 @@ public class ConsumerServiceImpl extends BaseDaoImpl<ConsumerEntity> implements 
     }
 
     @Override
+    public Consumer getById(@ThriftField(value = 1, name = "serviceToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken serviceToken, @ThriftField(value = 2, name = "id", requiredness = ThriftField.Requiredness.NONE) String id) throws RpcException, TException {
+
+        ConsumerEntity entity = this.get(id);
+
+        if(entity != null){
+            return entity.toConsumer();
+        }
+
+        return null;
+    }
+
+    @Override
     public void saveConsumer(@ThriftField(value = 1, name = "serviceToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken serviceToken, @ThriftField(value = 2, name = "consumer", requiredness = ThriftField.Requiredness.NONE) Consumer consumer) throws RpcException, TException {
         this.save(ConsumerEntity.formConsumerEntity(consumer));
     }

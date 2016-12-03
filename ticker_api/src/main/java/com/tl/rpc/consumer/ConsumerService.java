@@ -22,6 +22,15 @@ public interface ConsumerService
             @ThriftField(value=2, name="mobile", requiredness=Requiredness.NONE) final String mobile
         );
 
+        @ThriftMethod(value = "getById",
+                      exception = {
+                          @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
+                      })
+        ListenableFuture<Consumer> getById(
+            @ThriftField(value=1, name="serviceToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken serviceToken,
+            @ThriftField(value=2, name="id", requiredness=Requiredness.NONE) final String id
+        );
+
         @ThriftMethod(value = "saveConsumer",
                       exception = {
                           @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
@@ -48,6 +57,15 @@ public interface ConsumerService
     Consumer getByMobile(
         @ThriftField(value=1, name="serviceToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken serviceToken,
         @ThriftField(value=2, name="mobile", requiredness=Requiredness.NONE) final String mobile
+    ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
+
+    @ThriftMethod(value = "getById",
+                  exception = {
+                      @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
+                  })
+    Consumer getById(
+        @ThriftField(value=1, name="serviceToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken serviceToken,
+        @ThriftField(value=2, name="id", requiredness=Requiredness.NONE) final String id
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 
     @ThriftMethod(value = "saveConsumer",
