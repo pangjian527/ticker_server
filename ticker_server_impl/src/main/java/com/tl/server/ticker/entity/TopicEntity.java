@@ -1,6 +1,8 @@
 package com.tl.server.ticker.entity;
 
 import com.tl.rpc.reply.Reply;
+import com.tl.rpc.topic.TOPICSTATUS;
+import com.tl.rpc.topic.TOPICTYPE;
 import com.tl.rpc.topic.Topic;
 import org.apache.commons.beanutils.BeanUtils;
 import org.hibernate.annotations.GenericGenerator;
@@ -39,6 +41,10 @@ public class TopicEntity {
 
     private int stage;
 
+    private double balance;
+
+    private String expect;//预测内容，json格式
+
 
     @GenericGenerator(name = "generator", strategy = "uuid.hex")
     @Id
@@ -61,7 +67,7 @@ public class TopicEntity {
         this.title = title;
     }
 
-    @Column(name = "content")
+    @Column(name = "content",columnDefinition="BLOB", nullable=true)
     public String getContent() {
         return content;
     }
@@ -70,7 +76,7 @@ public class TopicEntity {
         this.content = content;
     }
 
-    @Column(name = "userId")
+    @Column(name = "user_Id")
     public String getUserId() {
         return userId;
     }
@@ -79,7 +85,7 @@ public class TopicEntity {
         this.userId = userId;
     }
 
-    @Column(name = "readCount")
+    @Column(name = "read_Count")
     public int getReadCount() {
         return readCount;
     }
@@ -88,7 +94,7 @@ public class TopicEntity {
         this.readCount = readCount;
     }
 
-    @Column(name = "replyCount")
+    @Column(name = "reply_Count")
     public int getReplyCount() {
         return replyCount;
     }
@@ -151,25 +157,62 @@ public class TopicEntity {
         this.updateTime = updateTime;
     }
 
+    @Column(name = "balance")
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    @Column(name = "expect")
+    public String getExpect() {
+        return expect;
+    }
+
+    public void setExpect(String expect) {
+        this.expect = expect;
+    }
 
     public static TopicEntity formTopicEntity(Topic topic){
 
         TopicEntity entity = new TopicEntity();
-        try{
-            BeanUtils.copyProperties(entity,topic);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+
+        entity.setId(topic.getId());
+        entity.setUserId(topic.getUserId());
+        entity.setTitle(topic.getTitle());
+        entity.setCreateTime(new Date(topic.getCreateTime()));
+        entity.setContent(topic.getContent());
+        entity.setReadCount(topic.getReadCount());
+        entity.setReplyCount(topic.getReplyCount());
+        entity.setStage(topic.getStage());
+        entity.setYear(topic.getYear());
+        entity.setStatus(topic.getStatus().name());
+        entity.setType(topic.getType().name());
+        entity.setBalance(topic.getBalance());
+        entity.setExpect(topic.getExpect());
+
         return entity;
     }
 
     public Topic toTopic(){
         Topic topic = new Topic();
-        try{
-            BeanUtils.copyProperties(topic,this);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+
+        topic.setId(this.id);
+        topic.setUserId(this.getUserId());
+        topic.setTitle(this.title);
+        topic.setCreateTime(this.getCreateTime().getTime());
+        topic.setContent(this.getContent());
+        topic.setReadCount(this.getReadCount());
+        topic.setReplyCount(this.getReplyCount());
+        topic.setStage(this.getStage());
+        topic.setYear(this.getYear());
+        topic.setStatus(TOPICSTATUS.valueOf(this.getStatus()));
+        topic.setType(TOPICTYPE.valueOf(this.getType()));
+        topic.setBalance((long)this.balance);
+        topic.setExpect(this.expect);
+
         return topic;
     }
 

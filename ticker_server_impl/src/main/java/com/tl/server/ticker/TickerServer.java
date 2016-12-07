@@ -10,6 +10,7 @@ import com.tl.rpc.consumer.ConsumerService;
 import com.tl.rpc.lottery.LotteryDataService;
 import com.tl.rpc.msg.MsgService;
 import com.tl.rpc.order.OrderService;
+import com.tl.rpc.product.ProductService;
 import com.tl.rpc.recharge.RechargeService;
 import com.tl.rpc.reply.ReplyService;
 import com.tl.rpc.sys.SysUser;
@@ -37,12 +38,14 @@ public class TickerServer {
         LotteryDataService lotteryDataService = new LotteryDataServiceImpl();
         BaseDataService baseDataService = new BaseDataServiceImpl();
         ConsumerService consumerService = new ConsumerServiceImpl();
+        ProductService productService = new ProductServiceImpl();
 
         ThriftServiceProcessor processor =
                 new ThriftServiceProcessor(new ThriftCodecManager(new ThriftCodec[0]),
                         new ArrayList(),
                         new Object[]{sysUserService,topicService,replyService,rechargeService
-                        ,orderService,msgService,lotteryDataService,baseDataService,consumerService});
+                        ,orderService,msgService,lotteryDataService,baseDataService
+                                ,consumerService,productService});
 
         ThriftServerConfig serverConfig = new ThriftServerConfig();
         serverConfig.setBindAddress("localhost");

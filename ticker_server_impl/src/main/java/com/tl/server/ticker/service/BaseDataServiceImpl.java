@@ -7,6 +7,9 @@ import com.tl.rpc.common.RpcException;
 import com.tl.rpc.common.ServiceToken;
 import com.tl.server.ticker.entity.BaseDataEntity;
 import org.apache.thrift.TException;
+import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -28,7 +31,11 @@ public class BaseDataServiceImpl extends BaseDaoImpl<BaseDataEntity> implements 
 
         String sql = "select * from t_base_data b where b.year =:year";
 
-        List<BaseDataEntity> list =this.getSession().createNativeQuery(sql,BaseDataEntity.class).setParameter("year",year).list();
+        Session session = this.getSession();
+
+        List<BaseDataEntity> list = session.createNativeQuery(sql,BaseDataEntity.class).setParameter("year",year).list();
+
+        session.close();
 
         List<BaseData> resultList = new LinkedList<BaseData>();
         for (BaseDataEntity entity : list) {
@@ -37,4 +44,5 @@ public class BaseDataServiceImpl extends BaseDaoImpl<BaseDataEntity> implements 
 
         return resultList;
     }
+
 }

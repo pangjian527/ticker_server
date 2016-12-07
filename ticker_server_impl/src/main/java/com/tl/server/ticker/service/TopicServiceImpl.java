@@ -41,4 +41,10 @@ public class TopicServiceImpl extends BaseDaoImpl<TopicEntity> implements TopicS
         return searchResult;
     }
 
+
+    @Override
+    public Topic getByTopicId(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "topicId", requiredness = ThriftField.Requiredness.NONE) String topicId) throws RpcException, TException {
+        return this.get(topicId).toTopic();
+    }
+
 }

@@ -7,6 +7,10 @@ import com.tl.rpc.sys.SysUser;
 import com.tl.rpc.sys.SysUserService;
 import com.tl.server.ticker.entity.SysUserEntity;
 import org.apache.thrift.TException;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 

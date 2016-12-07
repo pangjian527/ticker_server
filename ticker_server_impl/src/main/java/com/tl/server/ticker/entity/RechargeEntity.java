@@ -11,7 +11,7 @@ import java.util.Date;
  * Created by pangjian on 16-11-26.
  */
 @Table
-@Entity(name = "t_reaharge")
+@Entity(name = "t_recharge")
 public class RechargeEntity {
 
     private String id;

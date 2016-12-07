@@ -1,5 +1,6 @@
 package com.tl.server.ticker.entity;
 
+import com.tl.rpc.order.ORDERSTATUS;
 import com.tl.rpc.order.Order;
 import org.apache.commons.beanutils.BeanUtils;
 import org.hibernate.annotations.GenericGenerator;
@@ -20,7 +21,7 @@ public class OrderEntity {
 
     private String userId;
 
-    private String topicId;
+    private String productId;
 
     private String result;
 
@@ -55,7 +56,7 @@ public class OrderEntity {
         this.amount = amount;
     }
 
-    @Column(name = "userId")
+    @Column(name = "user_Id")
     public String getUserId() {
         return userId;
     }
@@ -64,13 +65,13 @@ public class OrderEntity {
         this.userId = userId;
     }
 
-    @Column(name = "topicId")
-    public String getTopicId() {
-        return topicId;
+    @Column(name = "product_Id")
+    public String getProductId() {
+        return productId;
     }
 
-    public void setTopicId(String topicId) {
-        this.topicId = topicId;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
     @Column(name = "result")
@@ -131,21 +132,32 @@ public class OrderEntity {
     public static OrderEntity formOrderEntity(Order order){
 
         OrderEntity entity = new OrderEntity();
-        try{
-            BeanUtils.copyProperties(entity,order);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        entity.setId(order.getId());
+        entity.setUserId(order.getUserId());
+        entity.setStage(order.getStage());
+        entity.setYear(order.getYear());
+        entity.setAmount(order.getAmount());
+        entity.setResult(order.getResult());
+        entity.setStatus(order.getStatus().name());
+        entity.setProductId(order.getProductId());
+        entity.setCreateTime(new Date(order.getCreateTime()));
+
         return entity;
     }
 
     public Order toOrder(){
-        Order msg = new Order();
-        try{
-            BeanUtils.copyProperties(msg,this);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return msg;
+        Order order = new Order();
+
+        order.setId(this.id);
+        order.setUserId(this.userId);
+        order.setStage(this.stage);
+        order.setYear(this.year);
+        order.setAmount((long)this.amount);
+        order.setResult(this.result);
+        order.setStatus(ORDERSTATUS.valueOf(this.status));
+        order.setProductId(this.getProductId());
+        order.setCreateTime(this.getCreateTime().getTime());
+
+        return order;
     }
 }

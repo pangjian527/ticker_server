@@ -8,6 +8,11 @@ import com.tl.rpc.consumer.ConsumerService;
 import com.tl.rpc.consumer.SearchResult;
 import com.tl.server.ticker.entity.ConsumerEntity;
 import org.apache.thrift.TException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate4.HibernateTemplate;
+import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -15,7 +20,7 @@ import java.util.List;
 /**
  * Created by pangjian on 16-12-2.
  */
-public class ConsumerServiceImpl extends BaseDaoImpl<ConsumerEntity> implements ConsumerService{
+public class ConsumerServiceImpl extends BaseDaoImpl<ConsumerEntity>  implements ConsumerService{
 
     public ConsumerServiceImpl(){ super(ConsumerEntity.class);    }
 
@@ -66,4 +71,5 @@ public class ConsumerServiceImpl extends BaseDaoImpl<ConsumerEntity> implements 
 
         return result;
     }
+
 }

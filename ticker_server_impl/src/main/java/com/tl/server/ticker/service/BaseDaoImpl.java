@@ -4,6 +4,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.NativeQuery;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -19,9 +21,6 @@ public class BaseDaoImpl<T> {
 
     private Map<String,Object> param;
 
-    private Session session ;
-    private SessionFactory sessionFactory;
-
     private NativeQuery<T> nativeQuery;
 
     private StringBuilder sql ;
@@ -29,22 +28,30 @@ public class BaseDaoImpl<T> {
     private int offset;
     private int limit;
 
+    private SessionFactory sessionFactory;
+
     public BaseDaoImpl(Class<T> clazz){
-        Configuration configure = new Configuration().configure();
-        this.sessionFactory = configure.buildSessionFactory();
-        this.session = sessionFactory.openSession();
-
         this.clazz = clazz;
-
         param= new HashMap<String, Object>();
     }
 
+    protected Session getSession(){
+        if(sessionFactory == null){
+            Configuration configure = new Configuration().configure();
+            sessionFactory = configure.buildSessionFactory();
+        }
+        Session session = sessionFactory.openSession();
+        return session;
+    }
+
     public void save(T t){
+        Session session = this.getSession();
+
         session.beginTransaction();
-        session.save(t);
+        session.saveOrUpdate(t);
         session.getTransaction().commit();
+
         session.close();
-        sessionFactory.close();
     }
 
 
@@ -76,19 +83,29 @@ public class BaseDaoImpl<T> {
             sqlTemp.append(" limit ").append(offset).append(",").append(limit);
         }
 
-        return this.getSession().createNativeQuery(sqlTemp.toString(),this.clazz).setProperties(this.param).list();
+        Session session = this.getSession();
+
+        NativeQuery<T> nativeQuery =session.createNativeQuery(sqlTemp.toString(), this.clazz);
+
+        List<T> list = nativeQuery.setProperties(this.param).list();
+        session.close();
+
+        return list;
     }
 
     public int getCount(){
-        return Integer.valueOf(this.getSession().createNativeQuery("select count(1) from ("+ this.sql+") t_count_temp ").setProperties(this.param).uniqueResult().toString());
-    }
+        Session session = this.getSession();
+        String count = session.createNativeQuery("select count(1) from (" + this.sql + ") t_count_temp ").setProperties(this.param).uniqueResult().toString();
 
+        session.close();
+        return Integer.valueOf(count);
+    }
 
     public T get(Serializable id){
-        return (T) session.get(clazz,id);
+        Session session = this.getSession();
+        T t = session.get(clazz, id);
+        session.close();
+        return  t;
     }
 
-    public Session getSession(){
-        return this.session;
-    }
 }

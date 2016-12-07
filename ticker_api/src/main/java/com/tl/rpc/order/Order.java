@@ -37,13 +37,13 @@ public final class Order
     @ThriftField
     public void setUserId(final String userId) { this.userId = userId; }
 
-    private String topicId;
+    private String productId;
 
-    @ThriftField(value=4, name="topicId", requiredness=Requiredness.NONE)
-    public String getTopicId() { return topicId; }
+    @ThriftField(value=4, name="productId", requiredness=Requiredness.NONE)
+    public String getProductId() { return productId; }
 
     @ThriftField
-    public void setTopicId(final String topicId) { this.topicId = topicId; }
+    public void setProductId(final String productId) { this.productId = productId; }
 
     private ORDERSTATUS status;
 
@@ -77,6 +77,14 @@ public final class Order
     @ThriftField
     public void setResult(final String result) { this.result = result; }
 
+    private long createTime;
+
+    @ThriftField(value=9, name="createTime", requiredness=Requiredness.NONE)
+    public long getCreateTime() { return createTime; }
+
+    @ThriftField
+    public void setCreateTime(final long createTime) { this.createTime = createTime; }
+
     @Override
     public String toString()
     {
@@ -84,11 +92,12 @@ public final class Order
             .add("id", id)
             .add("amount", amount)
             .add("userId", userId)
-            .add("topicId", topicId)
+            .add("productId", productId)
             .add("status", status)
             .add("year", year)
             .add("stage", stage)
             .add("result", result)
+            .add("createTime", createTime)
             .toString();
     }
 
@@ -107,11 +116,12 @@ public final class Order
             Objects.equals(id, other.id) &&
             Objects.equals(amount, other.amount) &&
             Objects.equals(userId, other.userId) &&
-            Objects.equals(topicId, other.topicId) &&
+            Objects.equals(productId, other.productId) &&
             Objects.equals(status, other.status) &&
             Objects.equals(year, other.year) &&
             Objects.equals(stage, other.stage) &&
-            Objects.equals(result, other.result);
+            Objects.equals(result, other.result) &&
+            Objects.equals(createTime, other.createTime);
     }
 
     @Override
@@ -120,11 +130,12 @@ public final class Order
             id,
             amount,
             userId,
-            topicId,
+            productId,
             status,
             year,
             stage,
-            result
+            result,
+            createTime
         });
     }
 }

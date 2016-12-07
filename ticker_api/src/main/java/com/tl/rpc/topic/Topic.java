@@ -101,6 +101,22 @@ public final class Topic
     @ThriftField
     public void setId(final String id) { this.id = id; }
 
+    private long balance;
+
+    @ThriftField(value=12, name="balance", requiredness=Requiredness.NONE)
+    public long getBalance() { return balance; }
+
+    @ThriftField
+    public void setBalance(final long balance) { this.balance = balance; }
+
+    private String expect;
+
+    @ThriftField(value=13, name="expect", requiredness=Requiredness.NONE)
+    public String getExpect() { return expect; }
+
+    @ThriftField
+    public void setExpect(final String expect) { this.expect = expect; }
+
     @Override
     public String toString()
     {
@@ -116,6 +132,8 @@ public final class Topic
             .add("stage", stage)
             .add("createTime", createTime)
             .add("id", id)
+            .add("balance", balance)
+            .add("expect", expect)
             .toString();
     }
 
@@ -141,7 +159,9 @@ public final class Topic
             Objects.equals(year, other.year) &&
             Objects.equals(stage, other.stage) &&
             Objects.equals(createTime, other.createTime) &&
-            Objects.equals(id, other.id);
+            Objects.equals(id, other.id) &&
+            Objects.equals(balance, other.balance) &&
+            Objects.equals(expect, other.expect);
     }
 
     @Override
@@ -157,7 +177,9 @@ public final class Topic
             year,
             stage,
             createTime,
-            id
+            id,
+            balance,
+            expect
         });
     }
 }

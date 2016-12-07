@@ -1,10 +1,20 @@
 package com.tl.server.ticker;
 
 
+import com.tl.rpc.common.ServiceToken;
+import com.tl.rpc.consumer.Consumer;
+import com.tl.rpc.consumer.ConsumerService;
+import com.tl.rpc.consumer.SearchResult;
+import com.tl.rpc.sys.SysUser;
+import com.tl.rpc.sys.SysUserService;
 import com.tl.server.ticker.entity.SysUserEntity;
+import com.tl.server.ticker.service.ConsumerServiceImpl;
+import com.tl.server.ticker.service.SysUserServiceImpl;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Date;
 
@@ -13,9 +23,9 @@ import java.util.Date;
  */
 public class Test {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
 
-        Configuration configure = new Configuration().configure();
+        /*Configuration configure = new Configuration().configure();
 
         SessionFactory sessionFactory = configure.buildSessionFactory();
 
@@ -34,6 +44,21 @@ public class Test {
         session.getTransaction().commit();
 
         session.close();
-        sessionFactory.close();
+        sessionFactory.close();*/
+
+        ClassPathXmlApplicationContext parentContent = new ClassPathXmlApplicationContext(new String[] { "/applicationContext.xml" },
+                false);
+
+        parentContent.setValidating(false);
+        parentContent.refresh();
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        context.setParent(parentContent);
+        context.refresh();
+
+        SysUserService sysUserService = context.getBean(SysUserServiceImpl.class);
+
+        SysUser sysUser = sysUserService.getByAccount(new ServiceToken(), "pangjian");
+
+        System.out.println(sysUser.getAccount());
     }
 }
