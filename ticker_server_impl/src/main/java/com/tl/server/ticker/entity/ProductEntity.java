@@ -34,6 +34,10 @@ public class ProductEntity {
 
     private String mobile;
 
+    private int virtualCount;
+
+    private String probability;
+
     @GenericGenerator(name = "generator", strategy = "uuid.hex")
     @Id
     @GeneratedValue(generator = "generator")
@@ -127,6 +131,24 @@ public class ProductEntity {
         this.mobile = mobile;
     }
 
+    @Column(name = "virtual_Count")
+    public int getVirtualCount() {
+        return virtualCount;
+    }
+
+    public void setVirtualCount(int virtualCount) {
+        this.virtualCount = virtualCount;
+    }
+
+    @Column(name = "probability")
+    public String getProbability() {
+        return probability;
+    }
+
+    public void setProbability(String probability) {
+        this.probability = probability;
+    }
+
     public static ProductEntity fromProduct(Product product){
         ProductEntity entity = new ProductEntity();
 
@@ -140,6 +162,8 @@ public class ProductEntity {
         entity.setYear(product.getYear());
         entity.setTitle(product.getTitle());
         entity.setMobile(product.getMobile());
+        entity.setVirtualCount(product.getVirtualCount());
+        entity.setProbability(product.getProbability());
 
         return entity;
     }
@@ -157,8 +181,12 @@ public class ProductEntity {
         product.setYear(this.getYear());
         product.setTitle(this.getTitle());
         product.setMobile(this.getMobile());
+        product.setVirtualCount(this.getVirtualCount());
+        product.setProbability(this.getProbability());
 
         return product;
     }
+
+
 
 }

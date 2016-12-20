@@ -31,10 +31,15 @@ public class ConsumerServiceImpl extends BaseDaoImpl<ConsumerEntity>  implements
 
         List<ConsumerEntity> list = this.setSql(sql.toString()).setParameter("account", mobile).execute();
 
-        if(list.size() > 0 ){
-            return list.get(0).toConsumer();
+        if(list.size() <= 0){
+            RpcException rpcException = new RpcException();
+            rpcException.setErrorId(1);
+            rpcException.setErrorContent("not consumer");
+            throw rpcException;
         }
-        return null;
+        System.out.println("----");
+
+        return list.get(0).toConsumer();
     }
 
     @Override

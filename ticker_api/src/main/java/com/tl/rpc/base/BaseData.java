@@ -61,6 +61,14 @@ public final class BaseData
     @ThriftField
     public void setColorCode(final String colorCode) { this.colorCode = colorCode; }
 
+    private long lotteryDate;
+
+    @ThriftField(value=7, name="lotteryDate", requiredness=Requiredness.NONE)
+    public long getLotteryDate() { return lotteryDate; }
+
+    @ThriftField
+    public void setLotteryDate(final long lotteryDate) { this.lotteryDate = lotteryDate; }
+
     @Override
     public String toString()
     {
@@ -71,6 +79,7 @@ public final class BaseData
             .add("year", year)
             .add("zodiacCode", zodiacCode)
             .add("colorCode", colorCode)
+            .add("lotteryDate", lotteryDate)
             .toString();
     }
 
@@ -91,7 +100,8 @@ public final class BaseData
             Objects.equals(number, other.number) &&
             Objects.equals(year, other.year) &&
             Objects.equals(zodiacCode, other.zodiacCode) &&
-            Objects.equals(colorCode, other.colorCode);
+            Objects.equals(colorCode, other.colorCode) &&
+            Objects.equals(lotteryDate, other.lotteryDate);
     }
 
     @Override
@@ -102,7 +112,8 @@ public final class BaseData
             number,
             year,
             zodiacCode,
-            colorCode
+            colorCode,
+            lotteryDate
         });
     }
 }

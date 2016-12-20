@@ -6,6 +6,7 @@ import org.hibernate.action.spi.Executable;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by pangjian on 16-11-26.
@@ -26,6 +27,8 @@ public class BaseDataEntity {
     private String zodiacCode;
     //颜色编码
     private String colorCode;
+
+    private Date lotteryDate;
 
 
     @GenericGenerator(name = "generator", strategy = "uuid.hex")
@@ -84,25 +87,40 @@ public class BaseDataEntity {
         this.colorCode = colorCode;
     }
 
+    @Column(name = "lottery_date")
+    public Date getLotteryDate() {
+        return lotteryDate;
+    }
+
+    public void setLotteryDate(Date lotteryDate) {
+        this.lotteryDate = lotteryDate;
+    }
 
     public static BaseDataEntity formBaseDataEntity(BaseData baseData){
-
         BaseDataEntity entity = new BaseDataEntity();
-       try{
-           BeanUtils.copyProperties(entity,baseData);
-       }catch (Exception e){
-           e.printStackTrace();
-       }
+
+        entity.colorCode = baseData.getColorCode();
+        entity.id = baseData.getId();
+        entity.stage = baseData.getStage();
+        entity.year = baseData.getYear();
+        entity.number = baseData.getNumber();
+        entity.zodiacCode = baseData.getZodiacCode();
+        entity.lotteryDate = new Date(baseData.getLotteryDate());
+
         return entity;
     }
 
     public BaseData toBaseData(){
         BaseData baseData = new BaseData();
-        try{
-            BeanUtils.copyProperties(baseData,this);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+
+        baseData.setColorCode(this.colorCode);
+        baseData.setId(this.id);
+        baseData.setStage(this.stage);
+        baseData.setNumber(this.number);
+        baseData.setYear(this.year);
+        baseData.setLotteryDate(this.getLotteryDate().getTime());
+        baseData.setZodiacCode(this.zodiacCode);
+
         return baseData;
     }
 

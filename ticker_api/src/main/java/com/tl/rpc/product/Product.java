@@ -93,6 +93,22 @@ public final class Product
     @ThriftField
     public void setMobile(final String mobile) { this.mobile = mobile; }
 
+    private int virtualCount;
+
+    @ThriftField(value=11, name="virtualCount", requiredness=Requiredness.NONE)
+    public int getVirtualCount() { return virtualCount; }
+
+    @ThriftField
+    public void setVirtualCount(final int virtualCount) { this.virtualCount = virtualCount; }
+
+    private String probability;
+
+    @ThriftField(value=13, name="probability", requiredness=Requiredness.NONE)
+    public String getProbability() { return probability; }
+
+    @ThriftField
+    public void setProbability(final String probability) { this.probability = probability; }
+
     @Override
     public String toString()
     {
@@ -107,6 +123,8 @@ public final class Product
             .add("status", status)
             .add("title", title)
             .add("mobile", mobile)
+            .add("virtualCount", virtualCount)
+            .add("probability", probability)
             .toString();
     }
 
@@ -131,7 +149,9 @@ public final class Product
             Objects.equals(updateTime, other.updateTime) &&
             Objects.equals(status, other.status) &&
             Objects.equals(title, other.title) &&
-            Objects.equals(mobile, other.mobile);
+            Objects.equals(mobile, other.mobile) &&
+            Objects.equals(virtualCount, other.virtualCount) &&
+            Objects.equals(probability, other.probability);
     }
 
     @Override
@@ -146,7 +166,9 @@ public final class Product
             updateTime,
             status,
             title,
-            mobile
+            mobile,
+            virtualCount,
+            probability
         });
     }
 }

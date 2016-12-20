@@ -29,7 +29,7 @@ public class BaseDataServiceImpl extends BaseDaoImpl<BaseDataEntity> implements 
 
     public List<BaseData> searchBaseData(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "year", requiredness = ThriftField.Requiredness.NONE) int year) throws RpcException, TException {
 
-        String sql = "select * from t_base_data b where b.year =:year";
+        String sql = "select * from t_base_data b where b.year =:year order by b.stage desc ";
 
         Session session = this.getSession();
 

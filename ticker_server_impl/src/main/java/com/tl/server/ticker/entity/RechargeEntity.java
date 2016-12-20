@@ -97,21 +97,24 @@ public class RechargeEntity {
     public static RechargeEntity formRechargeEntity(Recharge recharge){
 
         RechargeEntity entity = new RechargeEntity();
-        try{
-            BeanUtils.copyProperties(entity,recharge);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        entity.setUserId(recharge.getUserId());
+        entity.setSource(recharge.getSource());
+        entity.setGiveAmount(recharge.getGiveAmount());
+        entity.setAmount(recharge.getAmount());
+        entity.setId(recharge.getId());
+        entity.setCreateTime(new Date(recharge.getCreateTime()));
+
         return entity;
     }
 
     public Recharge toRecharge(){
         Recharge recharge = new Recharge();
-        try{
-            BeanUtils.copyProperties(recharge,this);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        recharge.setUserId(this.getUserId());
+        recharge.setSource(this.getSource());
+        recharge.setGiveAmount((long)this.getGiveAmount());
+        recharge.setAmount((long)this.getAmount());
+        recharge.setId(this.getId());
+        recharge.setCreateTime(this.getCreateTime().getTime());
         return recharge;
     }
 }
