@@ -69,6 +69,14 @@ public final class LotteryData
     @ThriftField
     public void setUpdateTime(final long updateTime) { this.updateTime = updateTime; }
 
+    private long lotteryTime;
+
+    @ThriftField(value=8, name="lotteryTime", requiredness=Requiredness.NONE)
+    public long getLotteryTime() { return lotteryTime; }
+
+    @ThriftField
+    public void setLotteryTime(final long lotteryTime) { this.lotteryTime = lotteryTime; }
+
     @Override
     public String toString()
     {
@@ -80,6 +88,7 @@ public final class LotteryData
             .add("number", number)
             .add("createTime", createTime)
             .add("updateTime", updateTime)
+            .add("lotteryTime", lotteryTime)
             .toString();
     }
 
@@ -101,7 +110,8 @@ public final class LotteryData
             Objects.equals(year, other.year) &&
             Objects.equals(number, other.number) &&
             Objects.equals(createTime, other.createTime) &&
-            Objects.equals(updateTime, other.updateTime);
+            Objects.equals(updateTime, other.updateTime) &&
+            Objects.equals(lotteryTime, other.lotteryTime);
     }
 
     @Override
@@ -113,7 +123,8 @@ public final class LotteryData
             year,
             number,
             createTime,
-            updateTime
+            updateTime,
+            lotteryTime
         });
     }
 }

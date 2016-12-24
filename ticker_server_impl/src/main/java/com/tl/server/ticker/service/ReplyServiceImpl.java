@@ -27,7 +27,7 @@ public class ReplyServiceImpl extends BaseDaoImpl<ReplyEntity> implements ReplyS
 
     public SearchReplyResult searchReplyByTopicId(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit, @ThriftField(value = 3, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset, @ThriftField(value = 4, name = "topicId", requiredness = ThriftField.Requiredness.NONE) String topicId) throws RpcException, TException {
 
-        StringBuilder sql = new StringBuilder("select * from t_reply r where r.topic_id = topicId order by r.update_time desc ");
+        StringBuilder sql = new StringBuilder("select * from t_reply r where r.topic_id = :topicId order by r.create_time desc ");
 
         List<ReplyEntity> list = this.setSql(sql.toString()).setParameter("topicId", topicId).setLimit(limit).setOffset(offset).execute();
 

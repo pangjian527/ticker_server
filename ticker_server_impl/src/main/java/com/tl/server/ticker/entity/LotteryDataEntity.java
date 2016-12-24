@@ -28,6 +28,8 @@ public class LotteryDataEntity {
 
     private Date updateTime;
 
+    private Date lotteryTime;//开奖日期
+
     @GenericGenerator(name = "generator", strategy = "uuid.hex")
     @Id
     @GeneratedValue(generator = "generator")
@@ -94,24 +96,42 @@ public class LotteryDataEntity {
         this.baseDataId = baseDataId;
     }
 
+    @Column(name = "lottery_time")
+    public Date getLotteryTime() {
+        return lotteryTime;
+    }
+
+    public void setLotteryTime(Date lotteryTime) {
+        this.lotteryTime = lotteryTime;
+    }
+
     public static LotteryDataEntity formLotteryDataEntity(LotteryData lotteryData){
 
         LotteryDataEntity entity = new LotteryDataEntity();
-        try{
-            BeanUtils.copyProperties(entity,lotteryData);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        entity.id = lotteryData.getId();
+        entity.baseDataId = lotteryData.getBaseDataId();
+        entity.year = lotteryData.getYear();
+        entity.number = lotteryData.getNumber();
+        entity.stage = lotteryData.getStage();
+        entity.createTime = new Date(lotteryData.getCreateTime());
+        entity.updateTime = new Date(lotteryData.getUpdateTime());
+        entity.lotteryTime = new Date(lotteryData.getLotteryTime());
+
         return entity;
     }
 
     public LotteryData toLotteryData(){
         LotteryData lotteryData = new LotteryData();
-        try{
-            BeanUtils.copyProperties(lotteryData,this);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+
+        lotteryData.setId(this.id);
+        lotteryData.setYear(this.year);
+        lotteryData.setUpdateTime(this.updateTime.getTime());
+        lotteryData.setCreateTime(this.createTime.getTime());
+        lotteryData.setNumber(this.number);
+        lotteryData.setStage(this.stage);
+        lotteryData.setLotteryTime(this.lotteryTime.getTime());
+        lotteryData.setBaseDataId(this.baseDataId);
+
         return lotteryData;
     }
 

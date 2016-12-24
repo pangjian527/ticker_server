@@ -31,7 +31,7 @@ public class RechargeServiceImpl extends BaseDaoImpl<RechargeEntity> implements 
         StringBuilder sql = new StringBuilder("select * from t_recharge r ");
 
         if(StringUtils.isNotBlank(userId)){
-            sql.append(" where r.user_id = userId");
+            sql.append(" where r.user_id = :userId");
             this.setParameter("userId",userId);
         }
 

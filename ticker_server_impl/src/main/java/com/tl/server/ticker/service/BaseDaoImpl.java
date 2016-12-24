@@ -57,6 +57,8 @@ public class BaseDaoImpl<T> {
 
     protected BaseDaoImpl setSql(String sql){
         this.sql = new StringBuilder(sql);
+        this.limit = 0 ;
+        this.offset =0 ;
         return this;
     }
 

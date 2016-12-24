@@ -53,6 +53,14 @@ public final class Reply
     @ThriftField
     public void setStatus(final REPLYSTATUS status) { this.status = status; }
 
+    private String topicId;
+
+    @ThriftField(value=6, name="topicId", requiredness=Requiredness.NONE)
+    public String getTopicId() { return topicId; }
+
+    @ThriftField
+    public void setTopicId(final String topicId) { this.topicId = topicId; }
+
     @Override
     public String toString()
     {
@@ -62,6 +70,7 @@ public final class Reply
             .add("userId", userId)
             .add("createTime", createTime)
             .add("status", status)
+            .add("topicId", topicId)
             .toString();
     }
 
@@ -81,7 +90,8 @@ public final class Reply
             Objects.equals(content, other.content) &&
             Objects.equals(userId, other.userId) &&
             Objects.equals(createTime, other.createTime) &&
-            Objects.equals(status, other.status);
+            Objects.equals(status, other.status) &&
+            Objects.equals(topicId, other.topicId);
     }
 
     @Override
@@ -91,7 +101,8 @@ public final class Reply
             content,
             userId,
             createTime,
-            status
+            status,
+            topicId
         });
     }
 }

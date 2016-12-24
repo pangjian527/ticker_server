@@ -30,6 +30,15 @@ public interface BaseDataService
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="year", requiredness=Requiredness.NONE) final int year
         );
+
+        @ThriftMethod(value = "getBaseDataById",
+                      exception = {
+                          @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
+                      })
+        ListenableFuture<BaseData> getBaseDataById(
+            @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
+            @ThriftField(value=2, name="id", requiredness=Requiredness.NONE) final String id
+        );
     }
     @ThriftMethod(value = "saveBaseData",
                   exception = {
@@ -47,5 +56,14 @@ public interface BaseDataService
     List<BaseData> searchBaseData(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="year", requiredness=Requiredness.NONE) final int year
+    ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
+
+    @ThriftMethod(value = "getBaseDataById",
+                  exception = {
+                      @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
+                  })
+    BaseData getBaseDataById(
+        @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
+        @ThriftField(value=2, name="id", requiredness=Requiredness.NONE) final String id
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 }

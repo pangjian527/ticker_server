@@ -21,14 +21,6 @@ public final class BaseData
     @ThriftField
     public void setId(final String id) { this.id = id; }
 
-    private int stage;
-
-    @ThriftField(value=2, name="stage", requiredness=Requiredness.NONE)
-    public int getStage() { return stage; }
-
-    @ThriftField
-    public void setStage(final int stage) { this.stage = stage; }
-
     private int number;
 
     @ThriftField(value=3, name="number", requiredness=Requiredness.NONE)
@@ -61,25 +53,24 @@ public final class BaseData
     @ThriftField
     public void setColorCode(final String colorCode) { this.colorCode = colorCode; }
 
-    private long lotteryDate;
+    private int seq;
 
-    @ThriftField(value=7, name="lotteryDate", requiredness=Requiredness.NONE)
-    public long getLotteryDate() { return lotteryDate; }
+    @ThriftField(value=7, name="seq", requiredness=Requiredness.NONE)
+    public int getSeq() { return seq; }
 
     @ThriftField
-    public void setLotteryDate(final long lotteryDate) { this.lotteryDate = lotteryDate; }
+    public void setSeq(final int seq) { this.seq = seq; }
 
     @Override
     public String toString()
     {
         return toStringHelper(this)
             .add("id", id)
-            .add("stage", stage)
             .add("number", number)
             .add("year", year)
             .add("zodiacCode", zodiacCode)
             .add("colorCode", colorCode)
-            .add("lotteryDate", lotteryDate)
+            .add("seq", seq)
             .toString();
     }
 
@@ -96,24 +87,22 @@ public final class BaseData
 
         return
             Objects.equals(id, other.id) &&
-            Objects.equals(stage, other.stage) &&
             Objects.equals(number, other.number) &&
             Objects.equals(year, other.year) &&
             Objects.equals(zodiacCode, other.zodiacCode) &&
             Objects.equals(colorCode, other.colorCode) &&
-            Objects.equals(lotteryDate, other.lotteryDate);
+            Objects.equals(seq, other.seq);
     }
 
     @Override
     public int hashCode() {
         return Arrays.deepHashCode(new Object[] {
             id,
-            stage,
             number,
             year,
             zodiacCode,
             colorCode,
-            lotteryDate
+            seq
         });
     }
 }

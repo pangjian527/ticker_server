@@ -1,5 +1,6 @@
 package com.tl.server.ticker.entity;
 
+import com.tl.rpc.reply.REPLYSTATUS;
 import com.tl.rpc.reply.Reply;
 import org.apache.commons.beanutils.BeanUtils;
 import org.hibernate.annotations.GenericGenerator;
@@ -26,6 +27,8 @@ public class ReplyEntity {
 
     private String status;
 
+    private String topicId;
+
     @GenericGenerator(name = "generator", strategy = "uuid.hex")
     @Id
     @GeneratedValue(generator = "generator")
@@ -47,7 +50,7 @@ public class ReplyEntity {
         this.content = content;
     }
 
-    @Column(name = "userId")
+    @Column(name = "user_Id")
     public String getUserId() {
         return userId;
     }
@@ -83,24 +86,38 @@ public class ReplyEntity {
         this.status = status;
     }
 
+    @Column(name = "topic_id")
+    public String getTopicId() {
+        return topicId;
+    }
+
+    public void setTopicId(String topicId) {
+        this.topicId = topicId;
+    }
+
     public static ReplyEntity formReplyEntity(Reply reply){
 
         ReplyEntity entity = new ReplyEntity();
-        try{
-            BeanUtils.copyProperties(entity,reply);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        entity.id = reply.getId();
+        entity.content = reply.getContent();
+        entity.userId = reply.getUserId();
+        entity.createTime = new Date(reply.getCreateTime());
+        entity.topicId = reply.getTopicId();
+        entity.status = reply.getStatus().name();
+
         return entity;
     }
 
     public Reply toReply(){
         Reply reply = new Reply();
-        try{
-            BeanUtils.copyProperties(reply,this);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+
+        reply.setUserId(this.getUserId());
+        reply.setContent(this.content);
+        reply.setId(this.id);
+        reply.setCreateTime(this.createTime.getTime());
+        reply.setTopicId(this.topicId);
+        reply.setStatus(REPLYSTATUS.valueOf(this.status));
+
         return reply;
     }
 }

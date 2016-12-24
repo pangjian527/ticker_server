@@ -45,4 +45,8 @@ public class BaseDataServiceImpl extends BaseDaoImpl<BaseDataEntity> implements 
         return resultList;
     }
 
+    @Override
+    public BaseData getBaseDataById(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "id", requiredness = ThriftField.Requiredness.NONE) String id) throws RpcException, TException {
+        return this.get(id).toBaseData();
+    }
 }
