@@ -2,30 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cdfa7bf-8d70-42e4-abf3-616822b4f9dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/base/BaseData.class" afterPath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/base/BaseData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/base/BaseDataService$Async.class" afterPath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/base/BaseDataService$Async.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/base/BaseDataService.class" afterPath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/base/BaseDataService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/lottery/LotteryData.class" afterPath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/lottery/LotteryData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/reply/Reply.class" afterPath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/reply/Reply.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/target/ticker_api-2.0-SNAPSHOT-sources.jar" afterPath="$PROJECT_DIR$/ticker_api/target/ticker_api-2.0-SNAPSHOT-sources.jar" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ticker_api/target/ticker_api-1.0-SNAPSHOT-sources.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ticker_api/target/ticker_api-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ticker_api/target/ticker_api-2.0-SNAPSHOT-sources.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ticker_server_impl/target/ticker_server_impl-1.0-SNAPSHOT-sources.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ticker_server_impl/target/ticker_server_impl-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ticker_server_impl/target/ticker_server_impl-2.0-SNAPSHOT-sources.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/target/ticker_api-2.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/ticker_api/target/ticker_api-2.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/entity/BaseDataEntity.class" afterPath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/entity/BaseDataEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/entity/LotteryDataEntity.class" afterPath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/entity/LotteryDataEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/service/BaseDaoImpl.class" afterPath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/service/BaseDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/service/BaseDataServiceImpl.class" afterPath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/service/BaseDataServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/target/ticker_server_impl-2.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/ticker_server_impl/target/ticker_server_impl-2.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/base/BaseData.java" afterPath="$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/base/BaseData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/base/BaseDataService.java" afterPath="$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/base/BaseDataService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/lottery/LotteryData.java" afterPath="$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/lottery/LotteryData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/reply/Reply.java" afterPath="$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/reply/Reply.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/BaseDataEntity.java" afterPath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/BaseDataEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/LotteryDataEntity.java" afterPath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/LotteryDataEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/ReplyEntity.java" afterPath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/ReplyEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/BaseDaoImpl.java" afterPath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/BaseDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/BaseDataServiceImpl.java" afterPath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/BaseDataServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/OrderServiceImpl.java" afterPath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/OrderServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/RechargeServiceImpl.java" afterPath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/RechargeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/ReplyServiceImpl.java" afterPath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/ReplyServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/ticker_api/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/pom.xml" afterPath="$PROJECT_DIR$/ticker_server_impl/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/ticker_server_impl/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="ticker_server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,21 +38,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConsumerServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/ConsumerServiceImpl.java">
+      <file leaf-file-name="TickerServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/TickerServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+            <state relative-caret-position="379">
+              <caret line="51" column="34" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TickerServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/TickerServer.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticker_server_impl/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+            <state relative-caret-position="1800">
+              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,11 +78,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RechargeServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RechargeServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/RechargeServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+            <state relative-caret-position="389">
+              <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ticker_server.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticker_server.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="61" column="20" selection-start-line="53" selection-start-column="7" selection-end-line="61" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ticker_server_impl.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticker_server_impl/ticker_server_impl.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -121,71 +139,6 @@
             <state relative-caret-position="-149">
               <caret line="29" column="26" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="26" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/BaseDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseDataServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/BaseDataServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-              <folding>
-                <element signature="e#691#692#0" expanded="false" />
-                <element signature="e#734#735#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LotteryDataEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/LotteryDataEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2256">
-              <caret line="131" column="51" selection-start-line="131" selection-start-column="40" selection-end-line="131" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#786#787#0" expanded="false" />
-                <element signature="e#811#812#0" expanded="false" />
-                <element signature="e#847#848#0" expanded="false" />
-                <element signature="e#875#876#0" expanded="false" />
-                <element signature="e#932#933#0" expanded="false" />
-                <element signature="e#960#961#0" expanded="false" />
-                <element signature="e#999#1000#0" expanded="false" />
-                <element signature="e#1033#1034#0" expanded="false" />
-                <element signature="e#1088#1089#0" expanded="false" />
-                <element signature="e#1115#1116#0" expanded="false" />
-                <element signature="e#1152#1153#0" expanded="false" />
-                <element signature="e#1184#1185#0" expanded="false" />
-                <element signature="e#1243#1244#0" expanded="false" />
-                <element signature="e#1272#1273#0" expanded="false" />
-                <element signature="e#1313#1314#0" expanded="false" />
-                <element signature="e#1349#1350#0" expanded="false" />
-                <element signature="e#1418#1419#0" expanded="false" />
-                <element signature="e#1451#1452#0" expanded="false" />
-                <element signature="e#1501#1502#0" expanded="false" />
-                <element signature="e#1545#1546#0" expanded="false" />
-                <element signature="e#1614#1615#0" expanded="false" />
-                <element signature="e#1647#1648#0" expanded="false" />
-                <element signature="e#1697#1698#0" expanded="false" />
-                <element signature="e#1741#1742#0" expanded="false" />
-                <element signature="e#1813#1814#0" expanded="false" />
-                <element signature="e#1846#1847#0" expanded="false" />
-                <element signature="e#1898#1899#0" expanded="false" />
-                <element signature="e#1942#1943#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -247,7 +200,6 @@
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/ProductEntity.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/ticker_api/pom.xml" />
-        <option value="$PROJECT_DIR$/ticker_server_impl/pom.xml" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/ConsumerServiceImpl.java" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/LotteryDataEntity.java" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/BaseDataEntity.java" />
@@ -257,6 +209,7 @@
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/ReplyServiceImpl.java" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/RechargeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/ticker_server_impl/pom.xml" />
       </list>
     </option>
   </component>
@@ -332,144 +285,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ticker_server_impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server_impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server_impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server_impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server_impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker_server_impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -831,7 +646,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -845,7 +660,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.50193906" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11024931" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2672956" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2672956" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -894,20 +709,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/4.3.4.RELEASE/spring-orm-4.3.4.RELEASE.jar!/org/springframework/orm/hibernate3/support/HibernateDaoSupport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="61" column="38" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/topic/SearchTopicResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/msg/Msg.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1106,22 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_server_impl/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/ProductEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -1170,7 +955,7 @@
           <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="false" />
-            <marker date="1482459362650" expanded="true" signature="2863:2881" ph="{...}" />
+            <marker date="1482721167634" expanded="true" signature="2863:2881" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1292,14 +1077,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/TickerServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/TopicEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-149">
@@ -1339,8 +1116,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/RechargeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+        <state relative-caret-position="389">
+          <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_server.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/TickerServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_server_impl/ticker_server_impl.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_server_impl/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="61" column="20" selection-start-line="53" selection-start-column="7" selection-end-line="61" selection-end-column="20" />
           <folding />
         </state>
       </provider>
