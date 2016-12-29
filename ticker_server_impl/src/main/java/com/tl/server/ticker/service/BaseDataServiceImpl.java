@@ -29,7 +29,7 @@ public class BaseDataServiceImpl extends BaseDaoImpl<BaseDataEntity> implements 
 
     public List<BaseData> searchBaseData(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "year", requiredness = ThriftField.Requiredness.NONE) int year) throws RpcException, TException {
 
-        String sql = "select * from t_base_data b where b.year =:year order by b.stage desc ";
+        String sql = "select * from t_base_data b where b.year =:year order by b.zodiac_Code ";
 
         Session session = this.getSession();
 
@@ -45,8 +45,20 @@ public class BaseDataServiceImpl extends BaseDaoImpl<BaseDataEntity> implements 
         return resultList;
     }
 
+
     @Override
-    public BaseData getBaseDataById(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "id", requiredness = ThriftField.Requiredness.NONE) String id) throws RpcException, TException {
-        return this.get(id).toBaseData();
+    public BaseData getBaseDataByNumber(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "number", requiredness = ThriftField.Requiredness.NONE) String number, @ThriftField(value = 3, name = "year", requiredness = ThriftField.Requiredness.NONE) int year) throws RpcException, TException {
+        String sql = "select * from t_base_data b where b.year =:year and b.number=:number order by b.zodiac_Code ";
+
+        Session session = this.getSession();
+
+        List<BaseDataEntity> list = session.createNativeQuery(sql,BaseDataEntity.class)
+                .setParameter("year",year).setParameter("number",number).list();
+
+        if (!list.isEmpty()){
+            return list.get(0).toBaseData();
+        }else{
+            return null;
+        }
     }
 }
