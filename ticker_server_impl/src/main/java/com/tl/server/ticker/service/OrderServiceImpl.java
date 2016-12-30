@@ -6,9 +6,14 @@ import com.tl.rpc.common.ServiceToken;
 import com.tl.rpc.order.Order;
 import com.tl.rpc.order.OrderResult;
 import com.tl.rpc.order.OrderService;
+import com.tl.server.ticker.entity.BaseDataEntity;
 import com.tl.server.ticker.entity.OrderEntity;
 import org.apache.thrift.TException;
+import org.hibernate.Session;
+import org.hibernate.query.NativeQuery;
+import org.hibernate.query.Query;
 
+import java.math.BigInteger;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -58,5 +63,27 @@ public class OrderServiceImpl extends BaseDaoImpl<OrderEntity> implements OrderS
         result.setResult(resultList);
 
         return result;
+    }
+
+    @Override
+    public int totalCountByProductId(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "productId", requiredness = ThriftField.Requiredness.NONE) String productId) throws RpcException, TException {
+
+        StringBuilder sql = new StringBuilder("select count(1) from t_order o where 1=1 ");
+
+        Session session = this.getSession();
+
+        if(productId != null){
+            sql.append(" and o.product_Id = :productId");
+        }
+
+        Query query = session.createNativeQuery(sql.toString());
+
+        if(productId != null){
+            query.setParameter("productId",productId);
+        }
+
+        Object object = query.uniqueResult();
+
+        return Integer.valueOf(object.toString());
     }
 }

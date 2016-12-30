@@ -37,7 +37,7 @@ public interface BaseDataService
                       })
         ListenableFuture<BaseData> getBaseDataByNumber(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
-            @ThriftField(value=2, name="number", requiredness=Requiredness.NONE) final String number,
+            @ThriftField(value=2, name="number", requiredness=Requiredness.NONE) final int number,
             @ThriftField(value=3, name="year", requiredness=Requiredness.NONE) final int year
         );
     }
@@ -65,7 +65,7 @@ public interface BaseDataService
                   })
     BaseData getBaseDataByNumber(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
-        @ThriftField(value=2, name="number", requiredness=Requiredness.NONE) final String number,
+        @ThriftField(value=2, name="number", requiredness=Requiredness.NONE) final int number,
         @ThriftField(value=3, name="year", requiredness=Requiredness.NONE) final int year
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 }

@@ -47,7 +47,7 @@ public class BaseDataServiceImpl extends BaseDaoImpl<BaseDataEntity> implements 
 
 
     @Override
-    public BaseData getBaseDataByNumber(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "number", requiredness = ThriftField.Requiredness.NONE) String number, @ThriftField(value = 3, name = "year", requiredness = ThriftField.Requiredness.NONE) int year) throws RpcException, TException {
+    public BaseData getBaseDataByNumber(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "number", requiredness = ThriftField.Requiredness.NONE) int number, @ThriftField(value = 3, name = "year", requiredness = ThriftField.Requiredness.NONE) int year) throws RpcException, TException {
         String sql = "select * from t_base_data b where b.year =:year and b.number=:number order by b.zodiac_Code ";
 
         Session session = this.getSession();
