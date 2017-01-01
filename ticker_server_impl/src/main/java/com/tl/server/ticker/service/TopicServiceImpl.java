@@ -25,7 +25,7 @@ public class TopicServiceImpl extends BaseDaoImpl<TopicEntity> implements TopicS
 
     public SearchTopicResult searchTopic(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit, @ThriftField(value = 3, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset, @ThriftField(value = 4, name = "status", requiredness = ThriftField.Requiredness.NONE) TOPICSTATUS status) throws RpcException, TException {
 
-        String sql = " select * from t_topic t order by t.update_time desc ";
+        String sql = " select * from t_topic t order by t.create_time desc ";
 
         List<TopicEntity> list = this.setSql(sql).setLimit(limit).setOffset(offset).execute();
 

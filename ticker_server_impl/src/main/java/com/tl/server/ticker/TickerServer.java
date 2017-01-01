@@ -18,6 +18,7 @@ import com.tl.rpc.sys.SysUserService;
 import com.tl.rpc.topic.TopicService;
 import com.tl.server.ticker.service.*;
 import io.airlift.units.Duration;
+import org.apache.thrift.server.TSimpleServer;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -51,7 +52,6 @@ public class TickerServer {
         serverConfig.setBindAddress("localhost");
         serverConfig.setPort(20000);
         serverConfig.setIdleConnectionTimeout(new Duration(365.0D, TimeUnit.DAYS));
-
         new ThriftServer(processor, serverConfig).start();
     }
 }
