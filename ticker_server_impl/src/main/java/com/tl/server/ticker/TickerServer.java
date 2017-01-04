@@ -51,7 +51,6 @@ public class TickerServer {
         ThriftServerConfig serverConfig = new ThriftServerConfig();
         serverConfig.setBindAddress("localhost");
         serverConfig.setPort(20000);
-        serverConfig.setIdleConnectionTimeout(new Duration(365.0D, TimeUnit.DAYS));
         new ThriftServer(processor, serverConfig).start();
     }
 }

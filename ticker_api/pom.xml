@@ -33,7 +33,7 @@
                 </executions>
                 <configuration>
                     <idlFiles>
-                        <directory>E://intellij//ticker//ticker-idl</directory>
+                        <directory>/home/pangjian/workspace/ideaIj/ticker/idl</directory>
                         <includes>
                             <include>*.thrift</include>
                         </includes>
