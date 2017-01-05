@@ -38,6 +38,8 @@ public class ProductEntity {
 
     private String probability;
 
+    private int limitCount;
+
     @GenericGenerator(name = "generator", strategy = "uuid.hex")
     @Id
     @GeneratedValue(generator = "generator")
@@ -149,6 +151,15 @@ public class ProductEntity {
         this.probability = probability;
     }
 
+    @Column(name = "limit_count")
+    public int getLimitCount() {
+        return limitCount;
+    }
+
+    public void setLimitCount(int limitCount) {
+        this.limitCount = limitCount;
+    }
+
     public static ProductEntity fromProduct(Product product){
         ProductEntity entity = new ProductEntity();
 
@@ -164,6 +175,7 @@ public class ProductEntity {
         entity.setMobile(product.getMobile());
         entity.setVirtualCount(product.getVirtualCount());
         entity.setProbability(product.getProbability());
+        entity.setLimitCount(product.getLimitCount());
 
         return entity;
     }
@@ -183,6 +195,7 @@ public class ProductEntity {
         product.setMobile(this.getMobile());
         product.setVirtualCount(this.getVirtualCount());
         product.setProbability(this.getProbability());
+        product.setLimitCount(this.getLimitCount());
 
         return product;
     }

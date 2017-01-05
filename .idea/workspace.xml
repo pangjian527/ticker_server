@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cdfa7bf-8d70-42e4-abf3-616822b4f9dc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/product/Product.class" afterPath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/product/Product.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/topic/Topic.class" afterPath="$PROJECT_DIR$/ticker_api/target/classes/com/tl/rpc/topic/Topic.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/target/ticker_api-2.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/ticker_api/target/ticker_api-2.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/entity/TopicEntity.class" afterPath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/entity/TopicEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/service/LotteryDataServiceImpl.class" afterPath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/service/LotteryDataServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/service/TopicServiceImpl.class" afterPath="$PROJECT_DIR$/ticker_server_impl/target/classes/com/tl/server/ticker/service/TopicServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/target/ticker_server_impl-2.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/ticker_server_impl/target/ticker_server_impl-2.0-SNAPSHOT-jar-with-dependencies.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/target/ticker_server_impl-2.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/ticker_server_impl/target/ticker_server_impl-2.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/pom.xml" afterPath="$PROJECT_DIR$/ticker_api/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/TickerServer.java" afterPath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/TickerServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/product/Product.java" afterPath="$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/product/Product.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/topic/Topic.java" afterPath="$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/topic/Topic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_api/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/ticker_api/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/ProductEntity.java" afterPath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/ProductEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/TopicEntity.java" afterPath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/TopicEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/LotteryDataServiceImpl.java" afterPath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/LotteryDataServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/TopicServiceImpl.java" afterPath="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/TopicServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticker_server_impl/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/ticker_server_impl/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="ticker_server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,12 +43,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TickerServer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TickerServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/TickerServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+            <state relative-caret-position="367">
+              <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/ProductServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/ProductEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="203" column="0" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+              <folding>
+                <element signature="e#3032#3033#0" expanded="true" />
+                <element signature="e#3065#3066#0" expanded="true" />
+                <element signature="e#3114#3115#0" expanded="true" />
+                <element signature="e#3158#3159#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,13 +81,22 @@
       <file leaf-file-name="LotteryDataServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/LotteryDataServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="28" column="95" selection-start-line="28" selection-start-column="91" selection-end-line="28" selection-end-column="95" />
+            <state relative-caret-position="400">
+              <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#619#620#0" expanded="false" />
-                <element signature="e#665#666#0" expanded="false" />
+                <element signature="e#619#620#0" expanded="true" />
+                <element signature="e#665#666#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/BaseDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="625">
+              <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,13 +104,9 @@
       <file leaf-file-name="BaseDataServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/BaseDataServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#691#692#0" expanded="false" />
-                <element signature="e#734#735#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="288">
+              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -70,137 +114,8 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32232">
-              <caret line="1507" column="33" selection-start-line="1507" selection-start-column="33" selection-end-line="1507" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LotteryDataEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/LotteryDataEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1176">
-              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#934#935#0" expanded="false" />
-                <element signature="e#959#960#0" expanded="false" />
-                <element signature="e#995#996#0" expanded="false" />
-                <element signature="e#1023#1024#0" expanded="false" />
-                <element signature="e#1080#1081#0" expanded="false" />
-                <element signature="e#1108#1109#0" expanded="false" />
-                <element signature="e#1147#1148#0" expanded="false" />
-                <element signature="e#1181#1182#0" expanded="false" />
-                <element signature="e#1236#1237#0" expanded="false" />
-                <element signature="e#1263#1264#0" expanded="false" />
-                <element signature="e#1300#1301#0" expanded="false" />
-                <element signature="e#1332#1333#0" expanded="false" />
-                <element signature="e#1391#1392#0" expanded="false" />
-                <element signature="e#1420#1421#0" expanded="false" />
-                <element signature="e#1461#1462#0" expanded="false" />
-                <element signature="e#1497#1498#0" expanded="false" />
-                <element signature="e#1566#1567#0" expanded="false" />
-                <element signature="e#1599#1600#0" expanded="false" />
-                <element signature="e#1649#1650#0" expanded="false" />
-                <element signature="e#1693#1694#0" expanded="false" />
-                <element signature="e#1762#1763#0" expanded="false" />
-                <element signature="e#1795#1796#0" expanded="false" />
-                <element signature="e#1845#1846#0" expanded="false" />
-                <element signature="e#1889#1890#0" expanded="false" />
-                <element signature="e#1960#1961#0" expanded="false" />
-                <element signature="e#1994#1995#0" expanded="false" />
-                <element signature="e#2046#2047#0" expanded="false" />
-                <element signature="e#2092#2093#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/OrderServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1512">
-              <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#754#755#0" expanded="false" />
-                <element signature="e#794#795#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/OrderEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1176">
-              <caret line="67" column="30" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#852#853#0" expanded="false" />
-                <element signature="e#877#878#0" expanded="false" />
-                <element signature="e#913#914#0" expanded="false" />
-                <element signature="e#941#942#0" expanded="false" />
-                <element signature="e#1003#1004#0" expanded="false" />
-                <element signature="e#1032#1033#0" expanded="false" />
-                <element signature="e#1076#1077#0" expanded="false" />
-                <element signature="e#1112#1113#0" expanded="false" />
-                <element signature="e#1175#1176#0" expanded="false" />
-                <element signature="e#1204#1205#0" expanded="false" />
-                <element signature="e#1248#1249#0" expanded="false" />
-                <element signature="e#1284#1285#0" expanded="false" />
-                <element signature="e#1353#1354#0" expanded="false" />
-                <element signature="e#1385#1386#0" expanded="false" />
-                <element signature="e#1435#1436#0" expanded="false" />
-                <element signature="e#1477#1478#0" expanded="false" />
-                <element signature="e#1539#1540#0" expanded="false" />
-                <element signature="e#1568#1569#0" expanded="false" />
-                <element signature="e#1612#1613#0" expanded="false" />
-                <element signature="e#1648#1649#0" expanded="false" />
-                <element signature="e#1717#1718#0" expanded="false" />
-                <element signature="e#1750#1751#0" expanded="false" />
-                <element signature="e#1800#1801#0" expanded="false" />
-                <element signature="e#1844#1845#0" expanded="false" />
-                <element signature="e#1913#1914#0" expanded="false" />
-                <element signature="e#1946#1947#0" expanded="false" />
-                <element signature="e#1996#1997#0" expanded="false" />
-                <element signature="e#2040#2041#0" expanded="false" />
-                <element signature="e#2102#2103#0" expanded="false" />
-                <element signature="e#2131#2132#0" expanded="false" />
-                <element signature="e#2175#2176#0" expanded="false" />
-                <element signature="e#2211#2212#0" expanded="false" />
-                <element signature="e#2266#2267#0" expanded="false" />
-                <element signature="e#2293#2294#0" expanded="false" />
-                <element signature="e#2330#2331#0" expanded="false" />
-                <element signature="e#2362#2363#0" expanded="false" />
-                <element signature="e#2419#2420#0" expanded="false" />
-                <element signature="e#2447#2448#0" expanded="false" />
-                <element signature="e#2486#2487#0" expanded="false" />
-                <element signature="e#2520#2521#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/base/BaseData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <marker date="1483506675773" expanded="true" signature="2863:2881" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticker_api/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+            <state relative-caret-position="385">
+              <caret line="1479" column="33" selection-start-line="1479" selection-start-column="33" selection-end-line="1479" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -209,31 +124,29 @@
       <file leaf-file-name="BaseDataEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/BaseDataEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="23" column="29" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#764#765#0" expanded="false" />
-                <element signature="e#789#790#0" expanded="false" />
-                <element signature="e#825#826#0" expanded="false" />
-                <element signature="e#853#854#0" expanded="false" />
-                <element signature="e#908#909#0" expanded="false" />
-                <element signature="e#935#936#0" expanded="false" />
-                <element signature="e#972#973#0" expanded="false" />
-                <element signature="e#1004#1005#0" expanded="false" />
-                <element signature="e#1063#1064#0" expanded="false" />
-                <element signature="e#1092#1093#0" expanded="false" />
-                <element signature="e#1133#1134#0" expanded="false" />
-                <element signature="e#1169#1170#0" expanded="false" />
-                <element signature="e#1239#1240#0" expanded="false" />
-                <element signature="e#1272#1273#0" expanded="false" />
-                <element signature="e#1324#1325#0" expanded="false" />
-                <element signature="e#1368#1369#0" expanded="false" />
-                <element signature="e#1437#1438#0" expanded="false" />
-                <element signature="e#1469#1470#0" expanded="false" />
-                <element signature="e#1519#1520#0" expanded="false" />
-                <element signature="e#1561#1562#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="288">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopicServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/TopicServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopicEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/TopicEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="200" column="34" selection-start-line="200" selection-start-column="34" selection-end-line="200" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -284,13 +197,10 @@
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/Test.java" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/SysUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/topic/TopicService.java" />
-        <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/TopicServiceImpl.java" />
-        <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/TopicEntity.java" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/ProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/OrderEntity.java" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/RechargeEntity.java" />
-        <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/ProductEntity.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/ConsumerServiceImpl.java" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/BaseDataEntity.java" />
@@ -301,11 +211,14 @@
         <option value="$PROJECT_DIR$/ticker_server_impl/pom.xml" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/LotteryDataEntity.java" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/BaseDataServiceImpl.java" />
-        <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/LotteryDataServiceImpl.java" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/ticker_api/pom.xml" />
         <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/TickerServer.java" />
+        <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/LotteryDataServiceImpl.java" />
+        <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/TopicEntity.java" />
+        <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/TopicServiceImpl.java" />
+        <option value="$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/ProductEntity.java" />
       </list>
     </option>
   </component>
@@ -517,6 +430,74 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ticker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticker_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticker_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticker_server_impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticker_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticker_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticker_server_impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -893,7 +874,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="1" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -907,7 +888,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.50193906" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11024931" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40461215" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4038877" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -917,7 +898,7 @@
       <window_info id="DBOutput" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24312669" sideWeight="0.41573033" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2138229" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31209505" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -947,7 +928,7 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="29" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1015,13 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/topic/Topic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/resources/_hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -1079,42 +1053,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/ProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/RechargeEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="116" column="61" selection-start-line="116" selection-start-column="61" selection-end-line="116" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/product/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/ProductEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="173" column="36" selection-start-line="173" selection-start-column="36" selection-end-line="173" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/TopicServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="447" selection-start-line="25" selection-start-column="447" selection-end-line="25" selection-end-column="447" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1136,6 +1078,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#865#866#0" expanded="false" />
+            <element signature="e#890#891#0" expanded="false" />
+            <element signature="e#926#927#0" expanded="false" />
+            <element signature="e#954#955#0" expanded="false" />
+            <element signature="e#1016#1017#0" expanded="false" />
+            <element signature="e#1045#1046#0" expanded="false" />
+            <element signature="e#1089#1090#0" expanded="false" />
+            <element signature="e#1125#1126#0" expanded="false" />
+            <element signature="e#1187#1188#0" expanded="false" />
+            <element signature="e#1217#1218#0" expanded="false" />
+            <element signature="e#1261#1262#0" expanded="false" />
+            <element signature="e#1299#1300#0" expanded="false" />
+            <element signature="e#1368#1369#0" expanded="false" />
+            <element signature="e#1401#1402#0" expanded="false" />
+            <element signature="e#1451#1452#0" expanded="false" />
+            <element signature="e#1495#1496#0" expanded="false" />
+            <element signature="e#1564#1565#0" expanded="false" />
+            <element signature="e#1597#1598#0" expanded="false" />
+            <element signature="e#1647#1648#0" expanded="false" />
+            <element signature="e#1691#1692#0" expanded="false" />
+            <element signature="e#1760#1761#0" expanded="false" />
+            <element signature="e#1792#1793#0" expanded="false" />
+            <element signature="e#1842#1843#0" expanded="false" />
+            <element signature="e#1884#1885#0" expanded="false" />
+            <element signature="e#1940#1941#0" expanded="false" />
+            <element signature="e#1966#1967#0" expanded="false" />
+            <element signature="e#2004#2005#0" expanded="false" />
+            <element signature="e#2034#2035#0" expanded="false" />
+            <element signature="e#2096#2097#0" expanded="false" />
+            <element signature="e#2125#2126#0" expanded="false" />
+            <element signature="e#2169#2170#0" expanded="false" />
+            <element signature="e#2205#2206#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1147,17 +1124,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/TopicEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-149">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/ReplyEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-125">
           <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding>
+            <element signature="e#1842#1843#0" expanded="false" />
+            <element signature="e#1872#1873#0" expanded="false" />
+            <element signature="e#1918#1919#0" expanded="false" />
+            <element signature="e#1956#1957#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1221,75 +1197,7 @@
           <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="false" />
-            <marker date="1483506675773" expanded="true" signature="2863:2881" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/BaseDataEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
-            <element signature="e#789#790#0" expanded="false" />
-            <element signature="e#825#826#0" expanded="false" />
-            <element signature="e#853#854#0" expanded="false" />
-            <element signature="e#908#909#0" expanded="false" />
-            <element signature="e#935#936#0" expanded="false" />
-            <element signature="e#972#973#0" expanded="false" />
-            <element signature="e#1004#1005#0" expanded="false" />
-            <element signature="e#1063#1064#0" expanded="false" />
-            <element signature="e#1092#1093#0" expanded="false" />
-            <element signature="e#1133#1134#0" expanded="false" />
-            <element signature="e#1169#1170#0" expanded="false" />
-            <element signature="e#1239#1240#0" expanded="false" />
-            <element signature="e#1272#1273#0" expanded="false" />
-            <element signature="e#1324#1325#0" expanded="false" />
-            <element signature="e#1368#1369#0" expanded="false" />
-            <element signature="e#1437#1438#0" expanded="false" />
-            <element signature="e#1469#1470#0" expanded="false" />
-            <element signature="e#1519#1520#0" expanded="false" />
-            <element signature="e#1561#1562#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/LotteryDataEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#934#935#0" expanded="false" />
-            <element signature="e#959#960#0" expanded="false" />
-            <element signature="e#995#996#0" expanded="false" />
-            <element signature="e#1023#1024#0" expanded="false" />
-            <element signature="e#1080#1081#0" expanded="false" />
-            <element signature="e#1108#1109#0" expanded="false" />
-            <element signature="e#1147#1148#0" expanded="false" />
-            <element signature="e#1181#1182#0" expanded="false" />
-            <element signature="e#1236#1237#0" expanded="false" />
-            <element signature="e#1263#1264#0" expanded="false" />
-            <element signature="e#1300#1301#0" expanded="false" />
-            <element signature="e#1332#1333#0" expanded="false" />
-            <element signature="e#1391#1392#0" expanded="false" />
-            <element signature="e#1420#1421#0" expanded="false" />
-            <element signature="e#1461#1462#0" expanded="false" />
-            <element signature="e#1497#1498#0" expanded="false" />
-            <element signature="e#1566#1567#0" expanded="false" />
-            <element signature="e#1599#1600#0" expanded="false" />
-            <element signature="e#1649#1650#0" expanded="false" />
-            <element signature="e#1693#1694#0" expanded="false" />
-            <element signature="e#1762#1763#0" expanded="false" />
-            <element signature="e#1795#1796#0" expanded="false" />
-            <element signature="e#1845#1846#0" expanded="false" />
-            <element signature="e#1889#1890#0" expanded="false" />
-            <element signature="e#1960#1961#0" expanded="false" />
-            <element signature="e#1994#1995#0" expanded="false" />
-            <element signature="e#2046#2047#0" expanded="false" />
-            <element signature="e#2092#2093#0" expanded="false" />
+            <marker date="1483596759659" expanded="true" signature="2863:2881" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1351,14 +1259,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/BaseDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.2.5.Final/hibernate-core-5.2.5.Final.jar!/org/hibernate/query/QueryProducer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -1385,38 +1285,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/LotteryDataServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="28" column="95" selection-start-line="28" selection-start-column="91" selection-end-line="28" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#619#620#0" expanded="false" />
-            <element signature="e#665#666#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/BaseDataServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#691#692#0" expanded="false" />
-            <element signature="e#734#735#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32232">
-          <caret line="1507" column="33" selection-start-line="1507" selection-start-column="33" selection-end-line="1507" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticker_api/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="744">
@@ -1427,8 +1295,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/TickerServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+        <state relative-caret-position="367">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/LotteryDataEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="1479" column="33" selection-start-line="1479" selection-start-column="33" selection-end-line="1479" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/LotteryDataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+          <folding>
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/BaseDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/BaseDataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/BaseDataEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/topic/Topic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-624">
+          <caret line="123" column="23" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/TopicServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/TopicEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="200" column="34" selection-start-line="200" selection-start-column="34" selection-end-line="200" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_api/src/main/java/com/tl/rpc/product/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2184">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/entity/ProductEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="203" column="0" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+          <folding>
+            <element signature="e#3032#3033#0" expanded="true" />
+            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#3114#3115#0" expanded="true" />
+            <element signature="e#3158#3159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticker_server_impl/src/main/java/com/tl/server/ticker/service/ProductServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>

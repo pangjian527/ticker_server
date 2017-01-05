@@ -117,6 +117,14 @@ public final class Topic
     @ThriftField
     public void setExpect(final String expect) { this.expect = expect; }
 
+    private long updateTime;
+
+    @ThriftField(value=14, name="updateTime", requiredness=Requiredness.NONE)
+    public long getUpdateTime() { return updateTime; }
+
+    @ThriftField
+    public void setUpdateTime(final long updateTime) { this.updateTime = updateTime; }
+
     @Override
     public String toString()
     {
@@ -134,6 +142,7 @@ public final class Topic
             .add("id", id)
             .add("balance", balance)
             .add("expect", expect)
+            .add("updateTime", updateTime)
             .toString();
     }
 
@@ -161,7 +170,8 @@ public final class Topic
             Objects.equals(createTime, other.createTime) &&
             Objects.equals(id, other.id) &&
             Objects.equals(balance, other.balance) &&
-            Objects.equals(expect, other.expect);
+            Objects.equals(expect, other.expect) &&
+            Objects.equals(updateTime, other.updateTime);
     }
 
     @Override
@@ -179,7 +189,8 @@ public final class Topic
             createTime,
             id,
             balance,
-            expect
+            expect,
+            updateTime
         });
     }
 }

@@ -26,10 +26,18 @@ public class LotteryDataServiceImpl extends BaseDaoImpl<LotteryDataEntity> imple
                                @ThriftField(value = 3, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit,
                                @ThriftField(value = 4, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset) throws RpcException, TException {
 
-        String sql = "select * from t_lottery_data d where d.year = :year order by d.stage desc ";
+        String sql = "select * from t_lottery_data d where 1=1" ;
 
-        List<LotteryDataEntity> list = this.setSql(sql).setParameter("year", year + "")
-                .setOffset(offset).setLimit(limit).execute();
+        if(year > 2015 ){
+            sql += " and d.year = :year";
+        }
+        sql += " order by d.create_time desc ";
+
+        BaseDaoImpl baseDao = this.setSql(sql).setOffset(offset).setLimit(limit);
+        if (year > 2015){
+            baseDao.setParameter("year", year + "");
+        }
+        List<LotteryDataEntity> list = baseDao.execute();
 
         List<LotteryData> resultList = new LinkedList<LotteryData>();
 

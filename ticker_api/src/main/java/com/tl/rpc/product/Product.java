@@ -109,6 +109,14 @@ public final class Product
     @ThriftField
     public void setProbability(final String probability) { this.probability = probability; }
 
+    private int limitCount;
+
+    @ThriftField(value=14, name="limitCount", requiredness=Requiredness.NONE)
+    public int getLimitCount() { return limitCount; }
+
+    @ThriftField
+    public void setLimitCount(final int limitCount) { this.limitCount = limitCount; }
+
     @Override
     public String toString()
     {
@@ -125,6 +133,7 @@ public final class Product
             .add("mobile", mobile)
             .add("virtualCount", virtualCount)
             .add("probability", probability)
+            .add("limitCount", limitCount)
             .toString();
     }
 
@@ -151,7 +160,8 @@ public final class Product
             Objects.equals(title, other.title) &&
             Objects.equals(mobile, other.mobile) &&
             Objects.equals(virtualCount, other.virtualCount) &&
-            Objects.equals(probability, other.probability);
+            Objects.equals(probability, other.probability) &&
+            Objects.equals(limitCount, other.limitCount);
     }
 
     @Override
@@ -168,7 +178,8 @@ public final class Product
             title,
             mobile,
             virtualCount,
-            probability
+            probability,
+            limitCount
         });
     }
 }

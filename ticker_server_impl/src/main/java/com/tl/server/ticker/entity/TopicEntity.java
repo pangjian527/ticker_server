@@ -192,6 +192,7 @@ public class TopicEntity {
         entity.setType(topic.getType().name());
         entity.setBalance(topic.getBalance());
         entity.setExpect(topic.getExpect());
+        entity.setUpdateTime(new Date(topic.getUpdateTime()));
 
         return entity;
     }
@@ -212,6 +213,7 @@ public class TopicEntity {
         topic.setType(TOPICTYPE.valueOf(this.getType()));
         topic.setBalance((long)this.balance);
         topic.setExpect(this.expect);
+        topic.setUpdateTime(this.getUpdateTime().getTime());
 
         return topic;
     }
