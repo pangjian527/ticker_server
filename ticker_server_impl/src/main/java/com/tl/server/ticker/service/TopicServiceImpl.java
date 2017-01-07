@@ -5,6 +5,7 @@ import com.tl.rpc.common.RpcException;
 import com.tl.rpc.common.ServiceToken;
 import com.tl.rpc.topic.*;
 import com.tl.server.ticker.entity.TopicEntity;
+import org.apache.commons.lang.StringUtils;
 import org.apache.thrift.TException;
 
 import java.util.Date;
@@ -25,11 +26,23 @@ public class TopicServiceImpl extends BaseDaoImpl<TopicEntity> implements TopicS
         this.save(topicEntity);
     }
 
-    public SearchTopicResult searchTopic(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit, @ThriftField(value = 3, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset, @ThriftField(value = 4, name = "status", requiredness = ThriftField.Requiredness.NONE) TOPICSTATUS status) throws RpcException, TException {
+    public SearchTopicResult searchTopic(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit, @ThriftField(value = 3, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset, @ThriftField(value = 4, name = "status", requiredness = ThriftField.Requiredness.NONE) TOPICSTATUS status,String mobile) throws RpcException, TException {
 
-        String sql = " select * from t_topic t order by t.update_time desc ";
+        String sql = " SELECT p.* FROM ticker.t_topic p ,t_consumer c where  c.id = p.user_id ";
 
-        List<TopicEntity> list = this.setSql(sql).setLimit(limit).setOffset(offset).execute();
+        if(StringUtils.isNotBlank(mobile)){
+            sql += " and c.mobile like :mobile ";
+        }
+
+        sql += " order by p.update_time desc ";
+
+        BaseDaoImpl baseDao = this.setSql(sql).setLimit(limit).setOffset(offset);
+
+        if(StringUtils.isNotBlank(mobile)){
+            baseDao.setParameter("mobile","%"+mobile);
+        }
+
+        List<TopicEntity> list = baseDao.execute();
 
         List<Topic> result = new LinkedList<Topic>();
         for (TopicEntity entity : list) {

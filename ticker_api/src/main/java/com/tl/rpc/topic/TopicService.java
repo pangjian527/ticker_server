@@ -30,7 +30,8 @@ public interface TopicService
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
             @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
-            @ThriftField(value=4, name="status", requiredness=Requiredness.NONE) final TOPICSTATUS status
+            @ThriftField(value=4, name="status", requiredness=Requiredness.NONE) final TOPICSTATUS status,
+            @ThriftField(value=5, name="mobile", requiredness=Requiredness.NONE) final String mobile
         );
 
         @ThriftMethod(value = "getByTopicId",
@@ -59,7 +60,8 @@ public interface TopicService
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
         @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
-        @ThriftField(value=4, name="status", requiredness=Requiredness.NONE) final TOPICSTATUS status
+        @ThriftField(value=4, name="status", requiredness=Requiredness.NONE) final TOPICSTATUS status,
+        @ThriftField(value=5, name="mobile", requiredness=Requiredness.NONE) final String mobile
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 
     @ThriftMethod(value = "getByTopicId",
