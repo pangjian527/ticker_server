@@ -32,7 +32,7 @@ public class OrderServiceImpl extends BaseDaoImpl<OrderEntity> implements OrderS
 
     public OrderResult searchOrder(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit, @ThriftField(value = 3, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset) throws RpcException, TException {
 
-        String sql = "select * from t_order o order by o.update_time desc ";
+        String sql = "select * from t_order o order by o.create_time desc ";
 
         List<OrderEntity> list = this.setSql(sql).setLimit(limit).setOffset(offset).execute();
 
@@ -49,7 +49,7 @@ public class OrderServiceImpl extends BaseDaoImpl<OrderEntity> implements OrderS
     }
 
     public OrderResult searchOrderByUserId(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit, @ThriftField(value = 3, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset, @ThriftField(value = 4, name = "userId", requiredness = ThriftField.Requiredness.NONE) String userId) throws RpcException, TException {
-        String sql = "select * from t_order o where o.user_id =:userId order by o.update_time desc ";
+        String sql = "select * from t_order o where o.user_id =:userId order by o.create_time desc ";
 
         List<OrderEntity> list = this.setSql(sql).setParameter("userId",userId).setLimit(limit).setOffset(offset).execute();
 
@@ -85,5 +85,23 @@ public class OrderServiceImpl extends BaseDaoImpl<OrderEntity> implements OrderS
         Object object = query.uniqueResult();
 
         return Integer.valueOf(object.toString());
+    }
+
+    @Override
+    public List<Order> getOrderByProductId(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "productId", requiredness = ThriftField.Requiredness.NONE) String productId) throws RpcException, TException {
+        StringBuilder sql = new StringBuilder("select * from t_order o where 1=1 ");
+
+        if(productId != null){
+            sql.append(" and o.product_Id = :productId");
+        }
+
+        List<OrderEntity> list = this.setSql(sql.toString()).setParameter("productId",productId).execute();
+
+        List<Order> resultList = new LinkedList<Order>();
+        for (OrderEntity entity:list) {
+            resultList.add(entity.toOrder());
+        }
+
+        return resultList;
     }
 }

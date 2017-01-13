@@ -40,6 +40,16 @@ public interface ProductService
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="productId", requiredness=Requiredness.NONE) final String productId
         );
+
+        @ThriftMethod(value = "getProductByYearAndStage",
+                      exception = {
+                          @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
+                      })
+        ListenableFuture<List<Product>> getProductByYearAndStage(
+            @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
+            @ThriftField(value=2, name="year", requiredness=Requiredness.NONE) final int year,
+            @ThriftField(value=3, name="stage", requiredness=Requiredness.NONE) final int stage
+        );
     }
     @ThriftMethod(value = "saveProduct",
                   exception = {
@@ -67,5 +77,15 @@ public interface ProductService
     Product getByProductId(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="productId", requiredness=Requiredness.NONE) final String productId
+    ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
+
+    @ThriftMethod(value = "getProductByYearAndStage",
+                  exception = {
+                      @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
+                  })
+    List<Product> getProductByYearAndStage(
+        @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
+        @ThriftField(value=2, name="year", requiredness=Requiredness.NONE) final int year,
+        @ThriftField(value=3, name="stage", requiredness=Requiredness.NONE) final int stage
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 }

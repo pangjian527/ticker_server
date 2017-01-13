@@ -7,6 +7,7 @@ import com.tl.rpc.product.Product;
 import com.tl.rpc.product.ProductService;
 import com.tl.rpc.product.SearchProductResult;
 import com.tl.server.ticker.entity.ProductEntity;
+import org.apache.commons.lang.StringUtils;
 import org.apache.thrift.TException;
 
 import java.util.LinkedList;
@@ -47,5 +48,29 @@ public class ProductServiceImpl extends BaseDaoImpl<ProductEntity> implements Pr
     @Override
     public Product getByProductId(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "productId", requiredness = ThriftField.Requiredness.NONE) String productId) throws RpcException, TException {
         return this.get(productId).toProduct();
+    }
+
+    @Override
+    public List<Product> getProductByYearAndStage(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "year", requiredness = ThriftField.Requiredness.NONE) int year, @ThriftField(value = 3, name = "stage", requiredness = ThriftField.Requiredness.NONE) int stage) throws RpcException, TException {
+
+        StringBuilder sql = new StringBuilder("select * from t_product p where 1=1 ");
+
+        if(year > 0){
+            sql.append(" and p.year = :year");
+        }
+        if(stage >=0 ){
+            sql.append(" and p.stage = :stage");
+        }
+
+        BaseDaoImpl baseDao = this.setSql(sql.toString()).setParameter("stage", stage + "").setParameter("year", year + "");
+
+        List<ProductEntity> list = baseDao.execute();
+
+        List<Product> resultList = new LinkedList<Product>();
+        for (ProductEntity entity:list) {
+            resultList.add(entity.toProduct());
+        }
+
+        return resultList;
     }
 }

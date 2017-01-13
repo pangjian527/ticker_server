@@ -35,6 +35,8 @@ public class RechargeServiceImpl extends BaseDaoImpl<RechargeEntity> implements 
             this.setParameter("userId",userId);
         }
 
+        sql.append(" order by  r.create_time desc ");
+
         List<RechargeEntity> list = this.setSql(sql.toString()).setLimit(limit).setOffset(offset).execute();
 
         List<Recharge> listResult = new LinkedList<Recharge>();

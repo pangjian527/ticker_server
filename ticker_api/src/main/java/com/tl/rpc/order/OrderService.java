@@ -51,6 +51,15 @@ public interface OrderService
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="productId", requiredness=Requiredness.NONE) final String productId
         );
+
+        @ThriftMethod(value = "getOrderByProductId",
+                      exception = {
+                          @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
+                      })
+        ListenableFuture<List<Order>> getOrderByProductId(
+            @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
+            @ThriftField(value=2, name="productId", requiredness=Requiredness.NONE) final String productId
+        );
     }
     @ThriftMethod(value = "saveOrder",
                   exception = {
@@ -87,6 +96,15 @@ public interface OrderService
                       @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
                   })
     int totalCountByProductId(
+        @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
+        @ThriftField(value=2, name="productId", requiredness=Requiredness.NONE) final String productId
+    ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
+
+    @ThriftMethod(value = "getOrderByProductId",
+                  exception = {
+                      @ThriftException(type=com.tl.rpc.common.RpcException.class, id=1)
+                  })
+    List<Order> getOrderByProductId(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="productId", requiredness=Requiredness.NONE) final String productId
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
