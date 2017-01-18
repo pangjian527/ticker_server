@@ -47,7 +47,8 @@ public interface ConsumerService
         ListenableFuture<SearchResult> searchConsumer(
             @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
             @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
-            @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset
+            @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
+            @ThriftField(value=4, name="mobile", requiredness=Requiredness.NONE) final String mobile
         );
     }
     @ThriftMethod(value = "getByMobile",
@@ -84,6 +85,7 @@ public interface ConsumerService
     SearchResult searchConsumer(
         @ThriftField(value=1, name="accessToken", requiredness=Requiredness.NONE) final com.tl.rpc.common.ServiceToken accessToken,
         @ThriftField(value=2, name="limit", requiredness=Requiredness.NONE) final int limit,
-        @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset
+        @ThriftField(value=3, name="offset", requiredness=Requiredness.NONE) final int offset,
+        @ThriftField(value=4, name="mobile", requiredness=Requiredness.NONE) final String mobile
     ) throws com.tl.rpc.common.RpcException, org.apache.thrift.TException;
 }

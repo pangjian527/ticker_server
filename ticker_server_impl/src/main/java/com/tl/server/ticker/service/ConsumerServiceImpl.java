@@ -7,6 +7,7 @@ import com.tl.rpc.consumer.Consumer;
 import com.tl.rpc.consumer.ConsumerService;
 import com.tl.rpc.consumer.SearchResult;
 import com.tl.server.ticker.entity.ConsumerEntity;
+import org.apache.commons.lang.StringUtils;
 import org.apache.thrift.TException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -60,10 +61,22 @@ public class ConsumerServiceImpl extends BaseDaoImpl<ConsumerEntity>  implements
     }
 
     @Override
-    public SearchResult searchConsumer(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit, @ThriftField(value = 3, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset) throws RpcException, TException {
-        String sql = "select * from t_consumer o order by o.update_time desc ";
+    public SearchResult searchConsumer(@ThriftField(value = 1, name = "accessToken", requiredness = ThriftField.Requiredness.NONE) ServiceToken accessToken, @ThriftField(value = 2, name = "limit", requiredness = ThriftField.Requiredness.NONE) int limit, @ThriftField(value = 3, name = "offset", requiredness = ThriftField.Requiredness.NONE) int offset, @ThriftField(value = 4, name = "mobile", requiredness = ThriftField.Requiredness.NONE) String mobile) throws RpcException, TException {
+        String sql = "select * from t_consumer o  where 1=1 ";
 
-        List<ConsumerEntity> list = this.setSql(sql).setLimit(limit).setOffset(offset).execute();
+        if(StringUtils.isNotBlank(mobile)){
+            sql += " and o.mobile like :mobile ";
+        }
+
+        sql += " order by o.update_time desc";
+
+        BaseDaoImpl baseDao = this.setSql(sql).setLimit(limit).setOffset(offset);
+
+        if(StringUtils.isNotBlank(mobile)){
+            baseDao.setParameter("mobile","%"+mobile+"%");
+        }
+
+        List<ConsumerEntity> list = baseDao.execute();
 
         List<Consumer> resultList = new LinkedList<Consumer>();
         for (ConsumerEntity entity:list) {
@@ -76,5 +89,4 @@ public class ConsumerServiceImpl extends BaseDaoImpl<ConsumerEntity>  implements
 
         return result;
     }
-
 }

@@ -4,7 +4,7 @@ import com.facebook.swift.codec.*;
 
 public enum PRODUCTSTATUS
 {
-    SALE(0), OPEN(1);
+    SALE(0), OPEN(1), REFUND(2);
 
     private final int value;
 
